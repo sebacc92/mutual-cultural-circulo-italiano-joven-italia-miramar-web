@@ -64,7 +64,7 @@ export default component$(() => {
 
           {/* Desktop Navigation */}
           <nav class="hidden md:flex items-center gap-8">
-            <Link href="/" class="text-gray-700 hover:text-[#CE2B37] text-sm">Home</Link>
+            <Link href="/" class="text-gray-700 hover:text-[#CE2B37] text-sm">Inicio</Link>
             <Link href="/autoridades" class="text-gray-700 hover:text-[#CE2B37] text-sm">Autoridades</Link>
             <Link href="/noticias" class="text-gray-700 hover:text-[#CE2B37] text-sm">Noticias</Link>
             <Link href="/agenda" class="text-gray-700 hover:text-[#CE2B37] text-sm">Agenda</Link>

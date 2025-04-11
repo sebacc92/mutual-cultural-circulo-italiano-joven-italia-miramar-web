@@ -15,11 +15,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Mutual Cultural Círculo Italiano Joven Italia",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Acompañando a la ciudad de Miramar hace 135 años 💚| Ciclo de charlas, Clases de Italiano 🤍| Muestras, Eventos ❤️| Trámites de Ciudadanía y +",
     },
   ],
 };
