@@ -1,10 +1,12 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import Logo from '~/media/logo.png?jsx';
+import { Button, Modal } from "~/components/ui";
 
 export default component$(() => {
   const loc = useLocation();
   const { pathname } = loc.url;
+  const showModalAutoridades = useSignal<boolean>(false)
   return (
     <header class="w-full">
       {/* Top bar with contact info and social media */}
@@ -88,7 +90,7 @@ export default component$(() => {
           {/* Desktop Navigation */}
           <nav class="hidden md:flex items-center gap-8">
             <Link href="/" class="text-gray-700 hover:text-[#CE2B37] text-sm">Inicio</Link>
-            <Link href="/autoridades" class="text-gray-700 hover:text-[#CE2B37] text-sm">Autoridades</Link>
+            <Link href="/autoridades" class="text-gray-700 hover:text-[#CE2B37] text-sm cursor-pointer">Autoridades</Link>
             <Link href="/noticias" class="text-gray-700 hover:text-[#CE2B37] text-sm">Noticias</Link>
             <Link href="/agenda" class="text-gray-700 hover:text-[#CE2B37] text-sm">Agenda</Link>
             <Link href="/galeria" class="text-gray-700 hover:text-[#CE2B37] text-sm">Galería de fotos</Link>
