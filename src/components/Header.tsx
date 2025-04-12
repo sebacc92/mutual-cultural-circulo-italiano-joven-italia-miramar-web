@@ -1,12 +1,10 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import Logo from '~/media/logo.png?jsx';
-import { Button, Modal } from "~/components/ui";
 
 export default component$(() => {
   const loc = useLocation();
   const { pathname } = loc.url;
-  const showModalAutoridades = useSignal<boolean>(false)
   return (
     <header class="w-full">
       {/* Top bar with contact info and social media */}
