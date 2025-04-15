@@ -4,7 +4,7 @@ import { LuCheck } from "@qwikest/icons/lucide";
 import { _ } from "compiled-i18n";
 import HeroSlider from "~/components/HeroSlider/HeroSlider";
 import { Button, Card } from "~/components/ui";
-import ImageStory from "~/media/story.jpg?jsx";
+import ImageStory from "~/media/story.jpg?h=500&jsx";
 
 export default component$(() => {
   return (
@@ -85,6 +85,29 @@ export default component$(() => {
                 <Button look="outline">
                   <Link href="/historia">{_`Conoce más`}</Link>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section class="py-16 bg-gradient-to-r from-italian-green via-white to-italian-red">
+          <div class="container">
+            <div class="mx-auto max-w-3xl rounded-lg bg-white p-8 shadow-lg">
+              <div class="text-center">
+                <h2 class="mb-4 text-3xl font-bold">{_`¿Quieres formar parte?`}</h2>
+                <p class="mb-6 text-muted-foreground">
+                  {_`Acércate a nuestra sede o contáctanos para conocer más sobre nuestras actividades, hacerte socio o
+                  presentar tu proyecto.`}
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                  <Button size="lg">
+                    <Link href="/contacto">{_`Contáctanos`}</Link>
+                  </Button>
+                  <Button size="lg" look="outline">
+                    <Link href="/socios">{_`Hazte socio`}</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
