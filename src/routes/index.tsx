@@ -1,9 +1,10 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import { LuCheck } from "@qwikest/icons/lucide";
 import { _ } from "compiled-i18n";
 import HeroSlider from "~/components/HeroSlider/HeroSlider";
 import { Button, Card } from "~/components/ui";
+import ImageStory from "~/media/story.jpg?jsx";
 
 export default component$(() => {
   return (
@@ -60,6 +61,34 @@ export default component$(() => {
             </Card.Footer>
           </Card.Root>
         </div>
+
+        {/* History Section */}
+        <section class="bg-muted py-16">
+          <div class="container">
+            <div class="grid gap-8 md:grid-cols-2 items-center">
+              <div class="order-2 md:order-1 relative h-[300px]">
+                <ImageStory
+                  class="object-cover rounded-lg"
+                />
+              </div>
+              <div class="order-1 md:order-2">
+                <h2 class="mb-4 text-3xl font-bold">{_`Nuestra Historia`}</h2>
+                <p class="mb-4 text-muted-foreground">
+                  {_`El Círculo Italiano de Miramar tiene sus raíces en la comunidad italiana que llegó a la región a
+                  finales del siglo XIX. Desde 1889, hemos sido un pilar de la cultura italiana en la ciudad,
+                  promoviendo el idioma, las tradiciones y el intercambio cultural.`}
+                </p>
+                <p class="mb-6 text-muted-foreground">
+                  {_`Durante 135 años, nuestra institución ha evolucionado pero manteniendo siempre el objetivo de ser un
+                  espacio para la comunidad italiana y todos los amantes de su cultura.`}
+                </p>
+                <Button look="outline">
+                  <Link href="/historia">{_`Conoce más`}</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
     </>
