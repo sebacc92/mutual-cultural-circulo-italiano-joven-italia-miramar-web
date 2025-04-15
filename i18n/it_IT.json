@@ -1,5 +1,9 @@
 {
   "locale": "it_IT",
   "name": "it (IT)",
-  "translations": {}
+  "translations": {
+    "Llamar": "Chiamare",
+    "Contacto": "Contattare",
+    "Change language": "Cambia lingua"
+  }
 }

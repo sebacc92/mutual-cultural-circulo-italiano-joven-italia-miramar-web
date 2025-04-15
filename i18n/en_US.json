@@ -1,5 +1,9 @@
 {
   "locale": "en_US",
   "name": "en (US)",
-  "translations": {}
+  "translations": {
+    "Llamar": "Call",
+    "Contacto": "Contact",
+    "Change language": "Change language"
+  }
 }
