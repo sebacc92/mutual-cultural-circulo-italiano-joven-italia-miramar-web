@@ -94,7 +94,7 @@ export default component$(() => {
                             </p>
                             <Link
                                 href={slide.ctaLink}
-                                class="inline-block px-6 py-3 bg-[#CE2B37] hover:bg-[#b52532] text-white text-sm md:text-base font-medium rounded-md transition-colors shadow-md"
+                                class="inline-block px-6 py-3 bg-[#CE2B37] hover:bg-[#b52532] text-white text-sm md:text-base font-medium rounded-md transition-colors shadow-sm"
                             >
                                 {slide.ctaText}
                             </Link>

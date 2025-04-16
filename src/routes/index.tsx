@@ -93,7 +93,7 @@ export default component$(() => {
         {/* Contact CTA */}
         <section class="py-16 bg-gradient-to-r from-italian-green via-white to-italian-red">
           <div class="container">
-            <div class="mx-auto max-w-3xl rounded-lg bg-white p-8 shadow-lg">
+            <div class="mx-auto max-w-3xl rounded-lg bg-white p-8 shadow-md">
               <div class="text-center">
                 <h2 class="mb-4 text-3xl font-bold">{_`¿Quieres formar parte?`}</h2>
                 <p class="mb-6 text-muted-foreground">

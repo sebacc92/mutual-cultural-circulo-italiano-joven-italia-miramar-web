@@ -30,7 +30,7 @@ export const LocaleSelector = component$(() => {
             </button>
             
             {showLanguageDropdown.value && (
-                <div class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20 animate-fadeIn">
+                <div class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-20 animate-fadeIn">
                     {locales.map((locale) => (
                         <a
                             key={locale}

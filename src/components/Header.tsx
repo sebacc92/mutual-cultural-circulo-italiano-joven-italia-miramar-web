@@ -80,7 +80,7 @@ export default component$(() => {
             </div>
             <Link
               href="/contacto"
-              class="bg-[#CE2B37] px-6 py-1.5 rounded-md text-sm font-medium text-white hover:bg-[#b52532] transition-colors shadow-sm"
+              class="bg-[#CE2B37] px-6 py-1.5 rounded-md text-sm font-medium text-white hover:bg-[#b52532] transition-colors shadow-xs"
             >
               {_`Contacto`}
             </Link>
@@ -126,7 +126,7 @@ export default component$(() => {
                       <path d="m6 9 6 6 6-6" />
                     </svg>
                   </button>
-                  <div class="absolute left-0 top-full z-10 mt-1 w-48 rounded-md border border-gray-200 bg-white py-2 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                  <div class="absolute left-0 top-full z-10 mt-1 w-48 rounded-md border border-gray-200 bg-white py-2 shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                     {item.items?.map((subItem) => (
                       <Link key={subItem.name} href={subItem.href} class="block px-4 py-2 text-sm hover:bg-gray-100">
                         {subItem.name}
