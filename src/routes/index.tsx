@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
-import { LuCheck } from "@qwikest/icons/lucide";
 import { _ } from "compiled-i18n";
 import HeroSlider from "~/components/HeroSlider/HeroSlider";
 import { Button, Card } from "~/components/ui";
@@ -29,11 +28,11 @@ export default component$(() => {
               <Card.Title>{_`Idiomas`}</Card.Title>
               <Card.Description>{_`Aprende italiano e inglés con nuestros diferentes niveles y propuestas para todas las edades.`}</Card.Description>
             </Card.Header>
-            <Card.Footer>
-              <Button class="w-full">
+            <Card.Footer class="flex gap-2">
+              <Button class="w-full" look="primary">
                 {_`Italiano`}
               </Button>
-              <Button class="w-full">
+              <Button class="w-full" look="primary">
                 {_`Inglés`}
               </Button>
             </Card.Footer>
@@ -44,8 +43,8 @@ export default component$(() => {
               <Card.Description>{_`Exposiciones, muestras, charlas y eventos que promueven la cultura italiana.`}</Card.Description>
             </Card.Header>
             <Card.Footer>
-              <Button class="w-full">
-                <LuCheck class="mr-2 h-4 w-4" /> {_`Ver agenda`}
+              <Button class="w-full" look="primary">
+                {_`Ver agenda`}
               </Button>
             </Card.Footer>
           </Card.Root>
@@ -55,8 +54,8 @@ export default component$(() => {
               <Card.Description>{_`Asesoramiento y apoyo en los trámites para obtener la ciudadanía italiana.`}</Card.Description>
             </Card.Header>
             <Card.Footer>
-              <Button class="w-full">
-                <LuCheck class="mr-2 h-4 w-4" /> {_`Consultar`}
+              <Button class="w-full" look="primary">
+                {_`Consultar`}
               </Button>
             </Card.Footer>
           </Card.Root>
@@ -82,7 +81,7 @@ export default component$(() => {
                   {_`Durante 135 años, nuestra institución ha evolucionado pero manteniendo siempre el objetivo de ser un
                   espacio para la comunidad italiana y todos los amantes de su cultura.`}
                 </p>
-                <Button look="outline">
+                <Button look="secondary">
                   <Link href="/historia">{_`Conoce más`}</Link>
                 </Button>
               </div>
@@ -101,10 +100,10 @@ export default component$(() => {
                   presentar tu proyecto.`}
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                  <Button size="lg">
+                  <Button size="lg" look="primary">
                     <Link href="/contacto">{_`Contáctanos`}</Link>
                   </Button>
-                  <Button size="lg" look="outline">
+                  <Button size="lg" look="secondary">
                     <Link href="/socios">{_`Hazte socio`}</Link>
                   </Button>
                 </div>

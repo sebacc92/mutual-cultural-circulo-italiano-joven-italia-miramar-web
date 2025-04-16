@@ -25,6 +25,10 @@ export default component$(() => {
                         <p class="mt-4 text-sm text-muted-foreground">
                             {_`Acompañando a la ciudad de Miramar hace 135 años`}
                         </p>
+                        <p class="flex gap-2 text-sm text-muted-foreground">
+                            <span class="text-primary">🇦🇷</span>
+                            <span class="text-primary">🇮🇹</span>
+                        </p>
                     </div>
 
                     <div>
