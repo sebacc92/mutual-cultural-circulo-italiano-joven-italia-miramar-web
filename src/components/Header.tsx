@@ -3,6 +3,7 @@ import { Link, useLocation } from "@builder.io/qwik-city";
 import Logo from '~/media/logo.png?jsx';
 import { _ } from "compiled-i18n";
 import { LocaleSelector } from "./locale-selector";
+import { NavLink } from "./NavLink";
 
 export default component$(() => {
   const loc = useLocation();
@@ -14,15 +15,15 @@ export default component$(() => {
       href: "#",
       dropdown: true,
       items: [
-        { name: "Clases de Italiano", href: "/clases/italiano" },
-        { name: "Clases de Inglés", href: "/clases/ingles" },
+        { name: "Clases de Italiano", href: "/clases/italiano/" },
+        { name: "Clases de Inglés", href: "/clases/ingles/" },
       ],
     },
-    { name: "Eventos", href: "/eventos" },
-    { name: "Trámites", href: "/tramites" },
-    { name: "Historia", href: "/historia" },
-    { name: "Autoridades", href: "/autoridades" },
-    { name: "Alquiler de salones", href: "/alquiler-salones" },
+    { name: "Eventos", href: "/eventos/" },
+    { name: "Trámites", href: "/tramites/" },
+    { name: "Historia", href: "/historia/" },
+    { name: "Autoridades", href: "/autoridades/" },
+    { name: "Alquiler de salones", href: "/alquiler-salones/" },
   ]
   return (
     <header class="w-full">
@@ -128,20 +129,26 @@ export default component$(() => {
                   </button>
                   <div class="absolute left-0 top-full z-10 mt-1 w-48 rounded-md border border-gray-200 bg-white py-2 shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                     {item.items?.map((subItem) => (
-                      <Link key={subItem.name} href={subItem.href} class="block px-4 py-2 text-sm hover:bg-gray-100">
+                      <NavLink
+                        key={subItem.name}
+                        href={subItem.href}
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        activeClass="!text-green-600 !font-bold"
+                      >
                         {subItem.name}
-                      </Link>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
               ) : (
-                <Link
+                <NavLink
                   key={item.name}
                   href={item.href}
-                  class="text-gray-700 hover:text-[#CE2B37] text-sm"
+                  class="text-gray-700 hover:text-[#CE2B37] text-md"
+                  activeClass="!text-green-600 !font-bold"
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               ),
             )}
           </nav>
