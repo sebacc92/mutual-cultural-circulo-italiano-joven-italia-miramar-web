@@ -128,7 +128,7 @@ export default component$(() => {
                     </svg>
                   </button>
                   <div class="absolute left-0 top-full z-10 mt-1 w-48 rounded-md border border-gray-200 bg-white py-2 shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                    {item.items?.map((subItem) => (
+                    {item.items.map((subItem) => (
                       <NavLink
                         key={subItem.name}
                         href={subItem.href}
