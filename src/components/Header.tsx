@@ -106,11 +106,11 @@ export default component$(() => {
             </Link>
           </div>
 
-          <nav class="hidden md:flex items-center md:gap-6">
+          <nav class="hidden md:flex items-center md:gap-1 font-bold">
             {navigation.map((item) =>
               item.dropdown ? (
                 <div key={item.name} class="relative group">
-                  <button class="text-sm transition-colors hover:text-primary flex items-center gap-1">
+                  <button class="text-gray-700 text-sm transition-colors hover:text-primary flex items-center gap-1">
                     {item.name}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -132,8 +132,8 @@ export default component$(() => {
                       <NavLink
                         key={subItem.name}
                         href={subItem.href}
-                        class="block px-4 py-2 text-md hover:bg-gray-100"
-                        activeClass="!text-green-600 !font-bold"
+                        class="block px-4 py-2 text-md hover:!text-[#fff] hover:bg-[#009246]"
+                        activeClass="!text-green-600"
                       >
                         {subItem.name}
                       </NavLink>
@@ -144,8 +144,8 @@ export default component$(() => {
                 <NavLink
                   key={item.name}
                   href={item.href}
-                  class="text-gray-700 hover:text-[#CE2B37] text-md"
-                  activeClass="!text-green-600 !font-bold"
+                  class="text-gray-700 hover:!text-[#fff] hover:bg-[#009246] text-md py-2 px-4"
+                  activeClass="!text-green-600"
                 >
                   {item.name}
                 </NavLink>
