@@ -2,7 +2,7 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { routeAction$, Form, zod$, z } from "@builder.io/qwik-city";
 import { _ } from "compiled-i18n";
-import styles from './styles.css';
+import styles from './styles.css?inline';
 
 export const useReservaAction = routeAction$(
     async (reserva) => {
