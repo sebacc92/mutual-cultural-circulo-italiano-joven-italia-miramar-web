@@ -10,6 +10,7 @@ export default component$(() => {
   const { pathname } = loc.url;
   const navigation = [
     { name: "Inicio", href: "/" },
+    { name: "Historia", href: "/historia/" },
     {
       name: "Idiomas",
       href: "#",
@@ -19,11 +20,10 @@ export default component$(() => {
         { name: "Clases de Inglés", href: "/clases/ingles/" },
       ],
     },
-    { name: "Eventos", href: "/eventos/" },
     { name: "Trámites", href: "/tramites/" },
-    { name: "Historia", href: "/historia/" },
-    { name: "Autoridades", href: "/autoridades/" },
+    { name: "Eventos", href: "/eventos/" },
     { name: "Alquiler de salones", href: "/alquiler-salones/" },
+    { name: "Autoridades", href: "/autoridades/" },
   ]
   return (
     <header class="w-full">
@@ -106,11 +106,11 @@ export default component$(() => {
             </Link>
           </div>
 
-          <nav class="hidden md:flex items-center md:gap-1 font-bold">
+          <nav class="hidden md:flex items-center font-bold">
             {navigation.map((item) =>
               item.dropdown ? (
                 <div key={item.name} class="relative group">
-                  <button class="text-gray-700 text-sm transition-colors hover:text-primary flex items-center gap-1">
+                  <button class="text-gray-700 text-sm px-4 py-2 transition-colors hover:text-primary flex items-center gap-1">
                     {item.name}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
