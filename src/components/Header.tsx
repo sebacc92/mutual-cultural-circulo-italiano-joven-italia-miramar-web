@@ -10,6 +10,9 @@ export default component$(() => {
   const { pathname } = loc.url;
   const navigation = [
     { name: "Inicio", href: "/" },
+    { name: "Eventos", href: "/eventos/" },
+    { name: "Trámites", href: "/tramites/" },
+    { name: "Alquiler de salones", href: "/alquiler-salones/" },
     { name: "Historia", href: "/historia/" },
     {
       name: "Idiomas",
@@ -20,9 +23,6 @@ export default component$(() => {
         { name: "Clases de Inglés", href: "/clases/ingles/" },
       ],
     },
-    { name: "Trámites", href: "/tramites/" },
-    { name: "Eventos", href: "/eventos/" },
-    { name: "Alquiler de salones", href: "/alquiler-salones/" },
     { name: "Autoridades", href: "/autoridades/" },
   ]
   return (

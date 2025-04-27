@@ -44,6 +44,48 @@ const eventos = [
     },
 ];
 
+// Utilidad para parsear fechas en formato "Día de la semana D de Mes - HShs" o "Lunes 17 de Marzo"
+function parseEventoDate(dateStr: string): Date | null {
+    // Intentar extraer día, mes y año
+    const meses = [
+        "enero", "febrero", "marzo", "abril", "mayo", "junio",
+        "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+    ];
+    const regex = /([0-9]{1,2}) de ([A-Za-záéíóúñ]+)(?: - (\d{1,2})h)?/i;
+    const match = dateStr.match(regex);
+    if (match) {
+        const dia = parseInt(match[1], 10);
+        const mes = meses.findIndex(m => m.toLowerCase() === match[2].toLowerCase());
+        const anio = 2025; // Hardcodeado para este dataset
+        if (mes >= 0) {
+            return new Date(anio, mes, dia);
+        }
+    }
+    // Si no matchea, intentar con otro formato (ej: "Lunes 17 de Marzo")
+    const regex2 = /([0-9]{1,2}) de ([A-Za-záéíóúñ]+)/i;
+    const match2 = dateStr.match(regex2);
+    if (match2) {
+        const dia = parseInt(match2[1], 10);
+        const mes = meses.findIndex(m => m.toLowerCase() === match2[2].toLowerCase());
+        const anio = 2025;
+        if (mes >= 0) {
+            return new Date(anio, mes, dia);
+        }
+    }
+    return null;
+}
+
+const today = new Date(2025, 3, 27); // 27 de abril de 2025 (mes 3 = abril)
+
+const eventosProximos = eventos.filter(e => {
+    const fecha = parseEventoDate(e.date);
+    return fecha && fecha >= today;
+});
+const eventosPasados = eventos.filter(e => {
+    const fecha = parseEventoDate(e.date);
+    return fecha && fecha < today;
+});
+
 export default component$(() => {
     return (
         <div class="flex min-h-screen flex-col">
@@ -60,11 +102,15 @@ export default component$(() => {
                     </div>
                 </section>
 
-                {/* Events List */}
+                {/* Próximos Eventos */}
                 <section class="py-16 bg-white">
                     <div class="container mx-auto px-4">
+                        <h2 class="text-2xl font-bold mb-8 text-green-700">{_`Próximos eventos`}</h2>
                         <div class="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
-                            {eventos.map((evento) => (
+                            {eventosProximos.length === 0 && (
+                                <p class="col-span-2 text-gray-500">{_`No hay eventos próximos.`}</p>
+                            )}
+                            {eventosProximos.map((evento) => (
                                 <div key={evento.id} class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                                     <div class="relative h-64">
                                         <img src={evento.image} alt={evento.title} class="w-full h-full object-cover" />
@@ -86,6 +132,44 @@ export default component$(() => {
                                     <div class="p-6 pt-0">
                                         <Button look="primary" class="bg-red-600 hover:bg-red-700">
                                             <Link href={`/eventos/${evento.id}`}>{_`Más información`}</Link>
+                                        </Button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Eventos Celebrados */}
+                <section class="py-8 bg-white">
+                    <div class="container mx-auto px-4">
+                        <h2 class="text-2xl font-bold mb-8 text-gray-500">{_`Eventos celebrados`}</h2>
+                        <div class="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
+                            {eventosPasados.length === 0 && (
+                                <p class="col-span-2 text-gray-400">{_`No hay eventos celebrados aún.`}</p>
+                            )}
+                            {eventosPasados.map((evento) => (
+                                <div key={evento.id} class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow opacity-70">
+                                    <div class="relative h-64">
+                                        <img src={evento.image} alt={evento.title} class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="p-6 border-b">
+                                        <h3 class="text-xl font-medium">{evento.title}</h3>
+                                        <div class="flex items-center gap-2 text-gray-600 mt-1">
+                                            <LuCalendar class="h-4 w-4" />
+                                            <span>{evento.date}</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <p class="mb-4 text-gray-600">{evento.description}</p>
+                                        <div class="flex items-center gap-2 text-sm text-gray-600">
+                                            <LuMapPin class="h-4 w-4" />
+                                            <span>{evento.location}</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 pt-0">
+                                        <Button look="primary" class="bg-red-600 hover:bg-red-700 opacity-80 cursor-default" disabled>
+                                            {_`Finalizado`}
                                         </Button>
                                     </div>
                                 </div>

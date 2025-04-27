@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import { _ } from "compiled-i18n";
 import HeroSlider from "~/components/HeroSlider/HeroSlider";
-import { Card } from "~/components/ui";
+import { Button, Card } from "~/components/ui";
 import ImageStory from "~/media/story.jpg?h=500&jsx";
 
 export default component$(() => {
@@ -22,42 +22,54 @@ export default component$(() => {
             </p>
           </div>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-            <Card.Root class="transition duration-300 ease-in-out hover:shadow-lg border border-gray-200">
+            {/* Tarjeta Idiomas */}
+            <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
+              <div class="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
               <Card.Header>
-                <Card.Title class="text-xl text-gray-800">{_`Idiomas`}</Card.Title>
+                <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Idiomas`}</Card.Title>
                 <Card.Description class="text-gray-600">{_`Aprende italiano e inglés con nuestros diferentes niveles y propuestas para todas las edades.`}</Card.Description>
               </Card.Header>
               <Card.Footer class="flex gap-3">
-                <Link href="/idiomas/italiano" class="w-full">
-                  {_`Italiano`}
-                </Link>
-                <Link href="/idiomas/ingles" class="w-full">
-                  {_`Inglés`}
-                </Link>
+                <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                  <Link href="/idiomas/italiano" class="w-full">
+                    {_`Italiano`}
+                  </Link>
+                </Button>
+                <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
+                  <Link href="/idiomas/ingles" class="w-full">
+                    {_`Inglés`}
+                  </Link>
+                </Button>
               </Card.Footer>
             </Card.Root>
-            
-            <Card.Root class="transition duration-300 ease-in-out hover:shadow-lg border border-gray-200">
+            {/* Tarjeta Eventos */}
+            <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
+              <div class="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
               <Card.Header>
-                <Card.Title class="text-xl text-gray-800">{_`Eventos Culturales`}</Card.Title>
+                <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Eventos Culturales`}</Card.Title>
                 <Card.Description class="text-gray-600">{_`Exposiciones, muestras, charlas y eventos que promueven la cultura italiana.`}</Card.Description>
               </Card.Header>
               <Card.Footer>
-                <Link href="/eventos" class="w-full">
-                  {_`Ver agenda`}
-                </Link>
+                <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                  <Link href="/eventos" class="w-full">
+                    {_`Ver agenda`}
+                  </Link>
+                </Button>
               </Card.Footer>
             </Card.Root>
-            
-            <Card.Root class="transition duration-300 ease-in-out hover:shadow-lg border border-gray-200">
+            {/* Tarjeta Trámites */}
+            <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
+              <div class="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
               <Card.Header>
-                <Card.Title class="text-xl text-gray-800">{_`Trámites de Ciudadanía`}</Card.Title>
+                <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Trámites de Ciudadanía`}</Card.Title>
                 <Card.Description class="text-gray-600">{_`Asesoramiento y apoyo en los trámites para obtener la ciudadanía italiana.`}</Card.Description>
               </Card.Header>
               <Card.Footer>
+                <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
                   <Link href="/tramites" class="w-full">
-                  {_`Consultar`}
-                </Link>
+                    {_`Asesoría`}
+                  </Link>
+                </Button>
               </Card.Footer>
             </Card.Root>
           </div>
@@ -78,9 +90,11 @@ export default component$(() => {
               <p class="mb-6 text-gray-700 text-lg leading-relaxed">
                 {_`Desde 1889, somos un pilar de la cultura italiana en Miramar. Nacimos para apoyar a los inmigrantes y hoy seguimos promoviendo el idioma, las tradiciones y el encuentro cultural. Con 135 años de historia, evolucionamos manteniendo nuestro corazón italiano.`}
               </p>
-              <Link href="/historia">
-                {_`Conoce más`}
-              </Link>
+              <Button>
+                <Link href="/historia">
+                  {_`Conoce más`}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -89,19 +103,23 @@ export default component$(() => {
       {/* Contact CTA Section */}
       <section class="py-16 md:py-20 bg-gradient-to-r from-green-600/80 via-white to-red-600/80">
         <div class="container mx-auto px-4">
-          <div class="mx-auto max-w-3xl rounded-lg bg-white p-10 shadow-lg">
+          <div class="mx-auto max-w-3xl rounded-lg bg-white p-10 shadow-lg border-2 border-green-600">
             <div class="text-center">
-              <h2 class="mb-4 text-3xl md:text-4xl font-bold text-gray-800">{_`¿Quieres formar parte?`}</h2>
+              <h2 class="mb-4 text-3xl md:text-4xl font-bold text-gray-800 font-serif tracking-wide">{_`¿Quieres formar parte?`}</h2>
               <p class="mb-8 text-lg text-gray-600">
                 {_`Acércate a nuestra sede o contáctanos para conocer más sobre nuestras actividades, hacerte socio o presentar tu proyecto.`}
               </p>
               <div class="flex flex-wrap justify-center gap-4">
-                <Link href="/contacto">
-                  {_`Contáctanos`}
-                </Link>
-                <Link href="/socios">
-                  {_`Hazte socio`}
-                </Link>
+                <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                  <Link href="/contacto" class="w-full">
+                    {_`Hazte socio`}
+                  </Link>
+                </Button>
+                <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
+                  <Link href="/proyectos" class="w-full">
+                    {_`Presenta tu proyecto`}
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
