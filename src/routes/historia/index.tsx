@@ -17,7 +17,7 @@ export default component$(() => {
                     <div class="container mx-auto px-4">
                         <div class="text-center">
                             <h1 class="mb-4 text-4xl font-bold text-gray-800 md:text-5xl">{_`Nuestra Historia`}</h1>
-                            <p class="mx-auto mb-6 max-w-2xl text-lg text-gray-600 md:text-xl">{_`135 años acompañando a la ciudad de Miramar 🇦🇷🇮🇹`}</p>
+                            <p class="mx-auto mb-6 max-w-2xl text-lg text-gray-600 md:text-xl">{_`136 años acompañando a la ciudad de Miramar 🇦🇷🇮🇹`}</p>
                         </div>
                     </div>
                 </section>
@@ -66,7 +66,7 @@ export default component$(() => {
                             <div class="relative h-[400px] flex justify-center items-center">
                                 <img
                                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-NiEgbBGLEnpWXV5RvzgV6n1MOyUvJo.png"
-                                    alt={_`135 años Círculo Italiano`}
+                                    alt={_`136 años Círculo Italiano`}
                                     class="object-contain h-full max-h-[350px] rounded-md shadow-md"
                                 />
                             </div>
@@ -155,7 +155,7 @@ export default component$(() => {
                                 <div>
                                     <h3 class="mb-2 text-xl font-semibold text-green-700">2024</h3>
                                     <p class="text-gray-600">
-                                        {_`Celebración de los 135 años de historia, reafirmando nuestro compromiso con la promoción de la cultura italiana en Miramar y continuando con los sueños por cumplir que impulsan nuestra institución.`}
+                                        {_`Celebración de los 136 años de historia, reafirmando nuestro compromiso con la promoción de la cultura italiana en Miramar y continuando con los sueños por cumplir que impulsan nuestra institución.`}
                                     </p>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ export default component$(() => {
                         <div class="mb-12 text-center">
                             <h2 class="mb-2 text-3xl font-bold text-gray-800">{_`Nuestros Valores`}</h2>
                             <p class="mx-auto max-w-2xl text-gray-600">
-                                {_`Principios que han guiado nuestra institución a lo largo de estos 135 años`}
+                                {_`Principios que han guiado nuestra institución a lo largo de estos 136 años`}
                             </p>
                         </div>
 
@@ -315,7 +315,7 @@ export default component$(() => {
                         <div class="mx-auto max-w-3xl text-center">
                             <blockquote class="relative italic text-xl text-gray-700 mb-6 p-6 border-l-4 border-green-500 bg-white rounded-r-lg shadow">
                                 <span class="absolute top-2 left-2 text-5xl text-green-300 opacity-50">“</span>
-                                {_`"Una institución que vio nacer a una ciudad, y una ciudad que vio crecer a una institución, un orgullo para todos los italianos y para todos sus descendientes. Un sueño que fue lejano y utópico, pero que se volvió realidad a partir del esfuerzo de cientos de personas que dedicaron parte de sus vidas a lograr que se convierta en una realidad. Hoy son 135 años y son muchos, pero aún nos quedan sueños por cumplir."`}
+                                {_`"Una institución que vio nacer a una ciudad, y una ciudad que vio crecer a una institución, un orgullo para todos los italianos y para todos sus descendientes. Un sueño que fue lejano y utópico, pero que se volvió realidad a partir del esfuerzo de cientos de personas que dedicaron parte de sus vidas a lograr que se convierta en una realidad. Hoy son 136 años y son muchos, pero aún nos quedan sueños por cumplir."`}
                                 <span class="absolute bottom-2 right-2 text-5xl text-green-300 opacity-50">”</span>
                             </blockquote>
                         </div>
@@ -331,7 +331,7 @@ export const head: DocumentHead = {
     meta: [
         {
             name: "description",
-            content: _`Conoce los 135 años de historia del Círculo Italiano Joven Italia de Miramar. Desde 1889 preservando y promoviendo la cultura italiana en la comunidad.`,
+            content: _`Conoce los 113635 años de historia del Círculo Italiano Joven Italia de Miramar. Desde 1889 preservando y promoviendo la cultura italiana en la comunidad.`,
         },
     ],
 };

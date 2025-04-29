@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import Logo from '~/media/logo.png?jsx';
 import { _ } from "compiled-i18n";
@@ -25,6 +25,7 @@ export default component$(() => {
     },
     { name: "Autoridades", href: "/autoridades/" },
   ]
+  const mobileMenuOpen = useSignal(false);
   return (
     <header class="w-full">
       {/* Top bar with contact info and social media */}
@@ -83,19 +84,19 @@ export default component$(() => {
       {/* Main header with logo and navigation */}
       <div class="bg-white border-b">
         <div class="container mx-auto px-2 py-2 flex flex-col items-center">
-          <div class="flex items-center w-full justify-center gap-2 my-4">
+          <div class="flex items-center w-full justify-center gap-2">
             <Link href="/" class="flex items-center gap-2">
               <Logo
                 alt="Círculo Italiano Miramar Logo"
                 class="rounded-full"
-                style={{ width: '81px', height: '81px' }}
+                style={{ width: '54px', height: '54px' }}
               />
               <div class="block text-center">
-                <p class="text-xl font-medium leading-none">Mutual Cultural</p>
-                <p class="text-2xl font-bold leading-tight whitespace-normal">Círculo Italiano Joven Italia</p>
+                <p class="text-[11px] font-medium leading-none">Mutual Cultural</p>
+                <p class="text-sm font-bold leading-tight whitespace-normal max-w-[120px]">Círculo Italiano Joven Italia</p>
               </div>
             </Link>
-            <button class="md:hidden ml-2" aria-label="Menu">
+            <button class="md:hidden ml-2" aria-label="Menu" onClick$={() => mobileMenuOpen.value = true}>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -148,6 +149,49 @@ export default component$(() => {
             )}
           </nav>
         </div>
+        {/* Mobile menu overlay */}
+        {mobileMenuOpen.value && (
+          <div class="fixed inset-0 z-50 bg-black/40 flex">
+            <div class="bg-white w-64 max-w-full h-full shadow-lg p-6 flex flex-col gap-4 animate-slideInLeft">
+              <button class="self-end mb-4" aria-label="Cerrar menú" onClick$={() => mobileMenuOpen.value = false}>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              {navigation.map((item) =>
+                item.dropdown ? (
+                  <div key={item.name} class="group">
+                    <span class="block font-bold text-gray-700 mb-1">{item.name}</span>
+                    <div class="ml-2 flex flex-col gap-1">
+                      {item.items.map((subItem) => (
+                        <NavLink
+                          key={subItem.name}
+                          href={subItem.href}
+                          class="text-gray-600 py-1 px-2 rounded hover:bg-[#009246] hover:text-white"
+                          activeClass="!text-green-600"
+                          onClick$={() => mobileMenuOpen.value = false}
+                        >
+                          {subItem.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <NavLink
+                    key={item.name}
+                    href={item.href}
+                    class="text-gray-700 font-bold py-2 px-2 rounded hover:bg-[#009246] hover:text-white"
+                    activeClass="!text-green-600"
+                    onClick$={() => mobileMenuOpen.value = false}
+                  >
+                    {item.name}
+                  </NavLink>
+                )
+              )}
+            </div>
+            <div class="flex-1" onClick$={() => mobileMenuOpen.value = false}></div>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -88,7 +88,7 @@ export default component$(() => {
             <div class="order-1 md:order-2">
               <h2 class="mb-4 text-3xl font-bold text-gray-800">{_`Nuestra Historia`}</h2>
               <p class="mb-6 text-gray-700 text-lg leading-relaxed">
-                {_`Desde 1889, somos un pilar de la cultura italiana en Miramar. Nacimos para apoyar a los inmigrantes y hoy seguimos promoviendo el idioma, las tradiciones y el encuentro cultural. Con 135 años de historia, evolucionamos manteniendo nuestro corazón italiano.`}
+                {_`Desde 1889, somos un pilar de la cultura italiana en Miramar. Nacimos para apoyar a los inmigrantes y hoy seguimos promoviendo el idioma, las tradiciones y el encuentro cultural. Con 136 años de historia, evolucionamos manteniendo nuestro corazón italiano.`}
               </p>
               <Button>
                 <Link href="/historia">
@@ -134,7 +134,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: _`Descubre el Círculo Italiano Joven Italia en Miramar. Clases de italiano e inglés, eventos culturales, trámites de ciudadanía y más. 135 años promoviendo la cultura italiana.`,
+      content: _`Descubre el Círculo Italiano Joven Italia en Miramar. Clases de italiano e inglés, eventos culturales, trámites de ciudadanía y más. 136 años promoviendo la cultura italiana.`,
     },
   ],
 };

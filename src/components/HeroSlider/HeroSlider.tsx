@@ -18,7 +18,7 @@ const slides: Slide[] = [
     {
         id: 1,
         title: "Bienvenidos al Círculo Italiano",
-        description: "Acompañando a la ciudad de Miramar hace 135 años con cultura, tradición y comunidad.",
+        description: "Acompañando a la ciudad de Miramar hace 136 años con cultura, tradición y comunidad.",
         image: "https://placehold.co/1600x800/009246/FFFFFF.png?text=Cultura+Italiana",
         ctaLink: "/historia",
         ctaText: "Conocer nuestra historia",

@@ -7,7 +7,7 @@ import { LuMapPin, LuPhone, LuMail, LuFacebook, LuInstagram } from "@qwikest/ico
 export default component$(() => {
     return (
         <footer class="w-full bg-muted py-12">
-            <div class="container mx-auto">
+            <div class="container mx-auto w-full px-4">
                 <div class="grid gap-8 md:grid-cols-3">
                     <div class="flex flex-col items-start">
                         <div class="flex items-center gap-2">
@@ -23,7 +23,7 @@ export default component$(() => {
                             </div>
                         </div>
                         <p class="mt-4 text-sm text-muted-foreground">
-                            {_`Acompañando a la ciudad de Miramar hace 135 años`}
+                            {_`Acompañando a la ciudad de Miramar hace 136 años`}
                         </p>
                         <p class="flex gap-2 text-sm text-muted-foreground">
                             <span class="text-primary">🇦🇷</span>
