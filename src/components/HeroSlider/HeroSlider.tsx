@@ -39,7 +39,33 @@ const slides: Slide[] = [
         ctaLink: "/eventos",
         ctaText: "Ver próximos eventos",
     },
+    {
+        id: 4,
+        title: "Trámites de Ciudadanía Italiana",
+        description: "Te asesoramos y acompañamos en el proceso para obtener tu ciudadanía italiana.",
+        image: "https://placehold.co/1600x800/009246/FFFFFF.png?text=Ciudadan%C3%ADa+Italiana",
+        ctaLink: "/tramites",
+        ctaText: "Ver asesoría",
+    },
+    {
+        id: 5,
+        title: "Alquiler de Salones",
+        description: "Espacios ideales para eventos sociales, culturales y educativos en Miramar.",
+        image: "https://placehold.co/1600x800/F1F5F9/CE2B37.png?text=Alquiler+de+Salones",
+        ctaLink: "/alquiler-salones",
+        ctaText: "Consultar disponibilidad",
+    },
+    {
+        id: 6,
+        title: "Sumate como Socio",
+        description: "Formá parte de nuestra comunidad y accedé a beneficios exclusivos.",
+        image: "https://placehold.co/1600x800/CE2B37/FFFFFF.png?text=Hacete+Socio",
+        ctaLink: "/contacto",
+        ctaText: "Hazte socio",
+    },
 ];
+
+const TimeOUT = 10000; // 6 seconds
 
 export default component$(() => {
     useStylesScoped$(styles);
@@ -52,7 +78,7 @@ export default component$(() => {
     useVisibleTask$(({ cleanup }) => {
         const interval = setInterval(() => {
             currentSlide.value = (currentSlide.value + 1) % totalSlides;
-        }, 6000); // Change slide every 6 seconds
+        }, TimeOUT); // Change slide every 6 seconds
 
         // Cleanup on unmount
         cleanup(() => clearInterval(interval));
@@ -85,16 +111,16 @@ export default component$(() => {
                     />
                     <div class="absolute inset-0 bg-black/25"></div>
                     <div class="slide-content px-4 md:px-12 lg:container mx-auto">
-                        <div class="max-w-lg bg-black/40 p-6 md:p-8 rounded-lg">
-                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
+                        <div class="max-w-lg bg-black/70 p-6 md:p-8 rounded-lg shadow-lg backdrop-blur-sm">
+                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 drop-shadow-lg">
                                 {slide.title}
                             </h2>
-                            <p class="text-base md:text-lg text-white/90 mb-6">
+                            <p class="text-base md:text-lg text-white/95 mb-6 drop-shadow">
                                 {slide.description}
                             </p>
                             <Link
                                 href={slide.ctaLink}
-                                class="inline-block px-6 py-3 bg-[#CE2B37] hover:bg-[#b52532] text-white text-sm md:text-base font-medium rounded-md transition-colors shadow-sm"
+                                class="inline-block px-6 py-3 bg-[#CE2B37] hover:bg-[#b52532] text-white text-sm md:text-base font-medium rounded-md transition-colors shadow-md"
                             >
                                 {slide.ctaText}
                             </Link>
@@ -159,4 +185,4 @@ export default component$(() => {
             </div>
         </div>
     );
-}); 
+});
