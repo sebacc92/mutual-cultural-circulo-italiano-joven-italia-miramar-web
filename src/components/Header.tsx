@@ -1,13 +1,11 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import { Link, useLocation } from "@builder.io/qwik-city";
+import { Link } from "@builder.io/qwik-city";
 import Logo from '~/media/logo.png?jsx';
 import { _ } from "compiled-i18n";
 import { LocaleSelector } from "./locale-selector";
 import { NavLink } from "./NavLink";
 
 export default component$(() => {
-  const loc = useLocation();
-  const { pathname } = loc.url;
   const navigation = [
     { name: "Inicio", href: "/" },
     { name: "Eventos", href: "/eventos/" },
@@ -30,10 +28,10 @@ export default component$(() => {
     <header class="w-full">
       {/* Top bar with contact info and social media */}
       <div class="relative bg-gradient-to-r from-[#009246] via-white to-[#CE2B37]">
-        <div class="container mx-auto px-2 h-auto flex items-center justify-center gap-2 flex-wrap py-2">
+        <div class="container mx-auto px-2 h-auto flex items-center justify-center gap-1 flex-wrap py-2">
           <a
             href="tel:+5492291451937"
-            class="flex items-center gap-1 px-2 py-1 rounded-md transition-colors hover:bg-white/20 text-xs"
+            class="flex items-center gap-1 px-1 sm:px-2 py-1 rounded-md transition-colors hover:bg-white/20 text-xs"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#006124]" viewBox="0 0 24 24" fill="currentColor">
               <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -42,7 +40,7 @@ export default component$(() => {
           </a>
           <a
             href="mailto:info@circuloitalianomiramar.com.ar"
-            class="flex items-center gap-1 px-2 py-1 rounded-md transition-colors hover:bg-white/20 text-xs"
+            class="flex items-center gap-1 px-1 sm:px-2 py-1 rounded-md transition-colors hover:bg-white/20 text-xs"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#006124]" viewBox="0 0 24 24" fill="currentColor">
               <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
@@ -52,8 +50,7 @@ export default component$(() => {
           </a>
           <Link
             href="/contacto"
-            class="bg-[#CE2B37] px-4 py-1 rounded-md text-xs font-medium text-white hover:bg-[#b52532] transition-colors shadow-xs"
-            style={{ minWidth: '90px', textAlign: 'center' }}
+            class="bg-[#CE2B37] px-2 sm:px-4 py-1 rounded-md text-xs font-medium text-white hover:bg-[#b52532] transition-colors shadow-xs"
           >
             {_`Contacto`}
           </Link>
@@ -92,8 +89,8 @@ export default component$(() => {
                 style={{ width: '54px', height: '54px' }}
               />
               <div class="block text-center">
-                <p class="text-[11px] font-medium leading-none">Mutual Cultural</p>
-                <p class="text-sm font-bold leading-tight whitespace-normal max-w-[120px]">Círculo Italiano Joven Italia</p>
+                <p class="text-lg font-medium leading-none">Mutual Cultural</p>
+                <p class="text-xl font-bold leading-tight whitespace-normal">Círculo Italiano Joven Italia</p>
               </div>
             </Link>
             <button class="md:hidden ml-2" aria-label="Menu" onClick$={() => mobileMenuOpen.value = true}>
@@ -169,7 +166,6 @@ export default component$(() => {
                           href={subItem.href}
                           class="text-gray-600 py-1 px-2 rounded hover:bg-[#009246] hover:text-white"
                           activeClass="!text-green-600"
-                          onClick$={() => mobileMenuOpen.value = false}
                         >
                           {subItem.name}
                         </NavLink>
@@ -182,7 +178,6 @@ export default component$(() => {
                     href={item.href}
                     class="text-gray-700 font-bold py-2 px-2 rounded hover:bg-[#009246] hover:text-white"
                     activeClass="!text-green-600"
-                    onClick$={() => mobileMenuOpen.value = false}
                   >
                     {item.name}
                   </NavLink>
