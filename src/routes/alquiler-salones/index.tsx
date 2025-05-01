@@ -218,8 +218,8 @@ export default component$(() => {
                             </svg>
                         </div>
                         <h4 class="text-lg font-semibold mb-2">{_`Email`}</h4>
-                        <p class="text-gray-700 mb-2 break-all">info@circuloitalianomiramar.com.ar</p>
-                        <a href="mailto:info@circuloitalianomiramar.com.ar" class="text-primary hover:underline text-sm">{_`Enviar email`}</a>
+                        <p class="text-gray-700 mb-2 break-all">italianos@miramarense.com.ar</p>
+                        <a href="mailto:italianos@miramarense.com.ar" class="text-primary hover:underline text-sm">{_`Enviar email`}</a>
                     </div>
                     
                     <div class="bg-white p-5 rounded-lg shadow-sm flex flex-col items-center text-center">

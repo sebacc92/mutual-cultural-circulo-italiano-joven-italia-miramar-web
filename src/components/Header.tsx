@@ -39,7 +39,7 @@ export default component$(() => {
             <span class="font-medium text-[#006124]">{_`Llamar`}</span>
           </a>
           <a
-            href="mailto:info@circuloitalianomiramar.com.ar"
+            href="mailto:italianos@miramarense.com.ar"
             class="flex items-center gap-1 px-1 sm:px-2 py-1 rounded-md transition-colors hover:bg-white/20 text-xs"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#006124]" viewBox="0 0 24 24" fill="currentColor">
@@ -81,16 +81,15 @@ export default component$(() => {
       {/* Main header with logo and navigation */}
       <div class="bg-white border-b">
         <div class="container mx-auto px-2 py-2 flex flex-col items-center">
-          <div class="flex items-center w-full justify-center gap-2">
-            <Link href="/" class="flex items-center gap-2">
-              <Logo
+          <div class="flex items-center w-full justify-center gap-2 lg:my-4">
+          <Link href="/" class="flex items-center gap-2 md:gap-4">
+            <Logo
                 alt="Círculo Italiano Miramar Logo"
-                class="rounded-full"
-                style={{ width: '54px', height: '54px' }}
+                class="rounded-full w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-all"
               />
               <div class="block text-center">
-                <p class="text-lg font-medium leading-none">Mutual Cultural</p>
-                <p class="text-xl font-bold leading-tight whitespace-normal">Círculo Italiano Joven Italia</p>
+                <p class="text-[11px] md:text-base font-medium leading-none">Mutual Cultural</p>
+                <p class="text-sm md:text-2xl lg:text-3xl font-bold leading-tight whitespace-normal md:whitespace-nowrap max-w-[120px] md:max-w-none">Círculo Italiano Joven Italia</p>
               </div>
             </Link>
             <button class="md:hidden ml-2" aria-label="Menu" onClick$={() => mobileMenuOpen.value = true}>
@@ -99,11 +98,11 @@ export default component$(() => {
               </svg>
             </button>
           </div>
-          <nav class="hidden md:flex items-center font-bold">
+          <nav class="hidden md:flex items-center font-bold gap-2">
             {navigation.map((item) =>
               item.dropdown ? (
                 <div key={item.name} class="relative group">
-                  <button class="text-gray-700 text-sm px-4 py-2 transition-colors hover:text-primary flex items-center gap-1">
+                  <button class="text-gray-700 text-sm px-4 py-2 transition-colors hover:text-primary flex items-center gap-1 whitespace-nowrap">
                     {item.name}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +136,7 @@ export default component$(() => {
                 <NavLink
                   key={item.name}
                   href={item.href}
-                  class="text-gray-700 hover:!text-[#fff] hover:bg-[#009246] text-md py-2 px-4"
+                  class="text-gray-700 hover:!text-[#fff] hover:bg-[#009246] text-md py-2 px-4 whitespace-nowrap"
                   activeClass="!text-green-600"
                 >
                   {item.name}

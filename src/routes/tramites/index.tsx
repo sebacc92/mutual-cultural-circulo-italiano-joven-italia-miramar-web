@@ -42,11 +42,6 @@ export default component$(() => {
                                         {_`Te orientamos sobre los requisitos, documentación necesaria y pasos a seguir para iniciar tu trámite.`}
                                     </p>
                                 </div>
-                                <div class="p-6 pt-0">
-                                    <Button look="outline" class="w-full">
-                                        <Link href="/contacto?asunto=tramites">{_`Consultar`}</Link>
-                                    </Button>
-                                </div>
                             </div>
 
                             <div class="border rounded shadow-sm">
@@ -59,11 +54,6 @@ export default component$(() => {
                                         {_`Te ayudamos con la búsqueda, traducción y legalización de documentos necesarios para tu trámite.`}
                                     </p>
                                 </div>
-                                <div class="p-6 pt-0">
-                                    <Button look="outline" class="w-full">
-                                        <Link href="/contacto?asunto=tramites">{_`Más información`}</Link>
-                                    </Button>
-                                </div>
                             </div>
 
                             <div class="border rounded shadow-sm">
@@ -75,11 +65,6 @@ export default component$(() => {
                                     <p class="text-gray-600">
                                         {_`Realizamos el seguimiento de tu trámite y te mantenemos informado sobre su estado y próximos pasos.`}
                                     </p>
-                                </div>
-                                <div class="p-6 pt-0">
-                                    <Button look="outline" class="w-full">
-                                        <Link href="/contacto?asunto=tramites">{_`Consultar`}</Link>
-                                    </Button>
                                 </div>
                             </div>
                         </div>

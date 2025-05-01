@@ -4,6 +4,11 @@ import { Link } from "@builder.io/qwik-city";
 import { LuCalendar, LuClock, LuMapPin } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
 import { _ } from "compiled-i18n";
+import EventoAniversarioImg from '~/media/eventos1.png?jsx';
+import EventoMalvinasImg from '~/media/eventos2.png?jsx';
+import MuseoRodanteImg from '~/media/museo-rodante.webp?jsx';
+import EventoVideoconferenciaImg from '~/media/videoconferencia1.jpeg?jsx';
+import EventoAntilefIuraImg from '~/media/eventos3.webp?jsx';
 
 const eventos = [
     {
@@ -29,6 +34,7 @@ const eventos = [
         title: "Charla: Un Museo Rodante",
         date: "Jueves 11 de Abril - 17:30hs",
         image: "/images/placeholder-evento.jpg",
+        imageComponent: MuseoRodanteImg,
         description:
             "Importante charla a cargo de Federico Rovituso: 'Un Museo Rodante' con colecciones e historias del Museo Provincial de Bellas Artes Emilio Pettoruti.",
         location: "Mutual Cultural Círculo Italiano, Calle 24 n1214",
@@ -41,6 +47,41 @@ const eventos = [
         description:
             "Arranca el ciclo lectivo 2025 de clases de Italiano, con sus diferentes niveles y propuestas para todas las edades. Inscripciones abiertas hasta el 4 de abril.",
         location: "Mutual Cultural Círculo Italiano, Calle 24 n1214",
+    },
+    {
+        id: "aniversario-136",
+        title: "136° Aniversario - Cena, baile y algo más!",
+        date: "Sábado 10 de Mayo - 21:30hs",
+        imageComponent: EventoMalvinasImg,
+        description:
+            "¡Celebramos nuestros inicios! Cena, baile y algo más. Anticipadas hasta el 8/05: Socios $23.000, No socios $27.000. Entrada general desde el 9/05: $32.000.",
+        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
+    },
+    {
+        id: "peones-malvinas",
+        title: "Peones de Malvinas - Anhelando verte otra vez",
+        date: "Martes 6 de Mayo - 10hs y 15:30hs",
+        imageComponent: EventoAniversarioImg,
+        description:
+            "Obra de la Escuela de danza Ritmos en Acción. La historia de una madre que extraña a su hijo, de un hijo que necesita a su mamá, de un pueblo que llora y sueña libertad. Entrada general: $4.000. Valor especial escuelas: $2.000. Reservas por WhatsApp: 223 4219060.",
+        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
+    },
+    {
+        id: "videoconferencia-renacimiento-italia",
+        title: "El Renacimiento en Italia: cultura y sociedad",
+        date: "Viernes 25 de Abril - 17:30hs",
+        imageComponent: EventoVideoconferenciaImg,
+        description:
+            "Videoconferencia a cargo de Eduardo Crivelli Minutti. El Renacimiento en Italia fue un periodo de transformación cultural que marcó el paso de la Edad Media a la modernidad, recuperando la herencia clásica y promoviendo el humanismo. Ciudades como Florencia, Venecia y Roma se destacaron por su innovación artística y cambios sociales, políticos y económicos que influyeron en el pensamiento moderno.",
+        location: "Via Zoom y presencial en Mutual Cultural Italiana, calle 24 n1214",
+    },
+    {
+        id: "antilef-iura-expo-2025",
+        title: "Exposición Antilef Iura + Música",
+        date: "Sábado 26 de Abril - 18hs",
+        imageComponent: EventoAntilefIuraImg,
+        description: "Exposición de arte y música en la Mutual Cultural Círculo Italiano Joven Italia. Obras de Antilef Iura y acompañamiento musical. ¡No te lo pierdas!",
+        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
     },
 ];
 
@@ -77,11 +118,17 @@ function parseEventoDate(dateStr: string): Date | null {
 
 const today = new Date(2025, 3, 27); // 27 de abril de 2025 (mes 3 = abril)
 
-const eventosProximos = eventos.filter(e => {
+// Ordenar eventos por fecha ascendente (más antiguo primero)
+const eventosOrdenados = [...eventos].sort((a, b) => {
+    const fechaA = parseEventoDate(a.date) || new Date(2100, 0, 1);
+    const fechaB = parseEventoDate(b.date) || new Date(2100, 0, 1);
+    return fechaA.getTime() - fechaB.getTime();
+});
+const eventosProximos = eventosOrdenados.filter(e => {
     const fecha = parseEventoDate(e.date);
     return fecha && fecha >= today;
 });
-const eventosPasados = eventos.filter(e => {
+const eventosPasados = eventosOrdenados.filter(e => {
     const fecha = parseEventoDate(e.date);
     return fecha && fecha < today;
 });
@@ -112,8 +159,12 @@ export default component$(() => {
                             )}
                             {eventosProximos.map((evento) => (
                                 <div key={evento.id} class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                                    <div class="relative h-64">
-                                        <img src={evento.image} alt={evento.title} class="w-full h-full object-cover" />
+                                    <div class="relative h-64 flex items-center justify-center bg-gray-100">
+                                        {evento.imageComponent ? (
+                                            <evento.imageComponent style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        ) : (
+                                            <img src={evento.image} alt={evento.title} class="w-full h-full object-cover" />
+                                        )}
                                     </div>
                                     <div class="p-6 border-b">
                                         <h3 class="text-xl font-medium">{evento.title}</h3>
@@ -150,8 +201,12 @@ export default component$(() => {
                             )}
                             {eventosPasados.map((evento) => (
                                 <div key={evento.id} class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow opacity-70">
-                                    <div class="relative h-64">
-                                        <img src={evento.image} alt={evento.title} class="w-full h-full object-cover" />
+                                    <div class="relative h-64 flex items-center justify-center bg-gray-100">
+                                        {evento.imageComponent ? (
+                                            <evento.imageComponent style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        ) : (
+                                            <img src={evento.image} alt={evento.title} class="w-full h-full object-cover" />
+                                        )}
                                     </div>
                                     <div class="p-6 border-b">
                                         <h3 class="text-xl font-medium">{evento.title}</h3>
@@ -177,53 +232,7 @@ export default component$(() => {
                         </div>
                     </div>
                 </section>
-
-                {/* Venue Rental */}
-                <section class="py-16 bg-gray-100">
-                    <div class="container mx-auto px-4">
-                        <div class="grid gap-8 md:grid-cols-2 items-center max-w-5xl mx-auto">
-                            <div>
-                                <h2 class="mb-4 text-3xl font-bold">{_`Alquiler de Salones`}</h2>
-                                <p class="mb-6 text-gray-600">
-                                    {_`Ofrecemos nuestros espacios para eventos sociales, culturales y educativos:`}
-                                </p>
-                                <ul class="mb-6 space-y-3">
-                                    <li class="flex items-start gap-2">
-                                        <div class="h-2 w-2 rounded-full bg-red-600 mt-2"></div>
-                                        <span>{_`Fiestas y celebraciones`}</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <div class="h-2 w-2 rounded-full bg-red-600 mt-2"></div>
-                                        <span>{_`Congresos, seminarios y charlas`}</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <div class="h-2 w-2 rounded-full bg-red-600 mt-2"></div>
-                                        <span>{_`Exposiciones y muestras`}</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <div class="h-2 w-2 rounded-full bg-red-600 mt-2"></div>
-                                        <span>{_`Capacitaciones, cursos y talleres`}</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <div class="h-2 w-2 rounded-full bg-red-600 mt-2"></div>
-                                        <span>{_`Cenas y almuerzos`}</span>
-                                    </li>
-                                </ul>
-                                <Button look="primary" class="bg-red-600 hover:bg-red-700">
-                                    <Link href="/contacto?asunto=alquiler">{_`Consultar disponibilidad`}</Link>
-                                </Button>
-                            </div>
-                            <div class="relative">
-                                <img
-                                    src="/images/salones-circulo-italiano.jpg"
-                                    alt={_`Salones del Círculo Italiano`}
-                                    class="object-cover rounded-lg max-h-[300px] w-full"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+                
                 {/* Calendar */}
                 <section class="py-16 bg-white">
                     <div class="container mx-auto px-4">

@@ -1,5 +1,6 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import AutoridadesImg from '~/media/autoridades.jpg?jsx';
 import { _ } from "compiled-i18n";
 
 export default component$(() => {
@@ -133,9 +134,8 @@ export default component$(() => {
             </div>
 
             <div class="team-photo">
-                <img 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                    alt={_`Consejo Directivo del Círculo Italiano`} 
+                <AutoridadesImg
+                    alt={_`Consejo Directivo del Círculo Italiano`}
                 />
                 <div class="text-center mt-2 text-sm text-gray-600">
                     {_`Miembros del Consejo Directivo - Período 2023-2024`}

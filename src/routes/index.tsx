@@ -9,7 +9,7 @@ export default component$(() => {
   return (
     <>
       <HeroSlider />
-      
+
       {/* Services Section */}
       <section class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4">
@@ -31,12 +31,12 @@ export default component$(() => {
               </Card.Header>
               <Card.Footer class="flex gap-3">
                 <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
-                  <Link href="/idiomas/italiano" class="w-full">
+                  <Link href="/clases/italiano" class="w-full">
                     {_`Italiano`}
                   </Link>
                 </Button>
                 <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
-                  <Link href="/idiomas/ingles" class="w-full">
+                  <Link href="/clases/ingles" class="w-full">
                     {_`Inglés`}
                   </Link>
                 </Button>
@@ -110,16 +110,20 @@ export default component$(() => {
                 {_`Acércate a nuestra sede o contáctanos para conocer más sobre nuestras actividades, hacerte socio o presentar tu proyecto.`}
               </p>
               <div class="flex flex-wrap justify-center gap-4">
-                <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                <div>
                   <Link href="/contacto" class="w-full">
-                    {_`Hazte socio`}
+                    <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                      {_`Hazte socio`}
+                    </Button>
                   </Link>
-                </Button>
-                <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
+                </div>
+                <div>
                   <Link href="/proyectos" class="w-full">
-                    {_`Presenta tu proyecto`}
+                    <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
+                      {_`Presenta tu proyecto`}
+                    </Button>
                   </Link>
-                </Button>
+                </div>
               </div>
             </div>
           </div>

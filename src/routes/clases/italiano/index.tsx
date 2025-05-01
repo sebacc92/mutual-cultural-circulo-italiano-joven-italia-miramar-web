@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link } from "@builder.io/qwik-city";
 import { LuCheck } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
+import ClasesItalianoImg from "~/media/clases-italiano.jpeg?jsx";
 import { _ } from "compiled-i18n";
 
 export default component$(() => {
@@ -38,10 +39,8 @@ export default component$(() => {
                                 </div>
                             </div>
                             <div class="flex justify-center">
-                                <img
-                                    src="/images/clases-italiano.png"
-                                    alt={_`Clases de Italiano 2025`}
-                                    class="h-[350px] object-contain"
+                                <ClasesItalianoImg
+                                    style={{ height: "600px", maxWidth: "500px" }}
                                 />
                             </div>
                         </div>
@@ -162,13 +161,6 @@ export default component$(() => {
                 <section class="py-16 bg-gray-100">
                     <div class="container mx-auto px-4">
                         <div class="grid gap-8 md:grid-cols-2 items-center max-w-5xl mx-auto">
-                            <div class="relative">
-                                <img
-                                    src="/images/clases-para-ninos.png"
-                                    alt={_`Clases para niños`}
-                                    class="object-cover rounded-lg max-h-[300px]"
-                                />
-                            </div>
                             <div>
                                 <h2 class="mb-4 text-3xl font-bold">{_`Clases para los más chiquitos`}</h2>
                                 <p class="mb-6 text-gray-600">
@@ -192,9 +184,6 @@ export default component$(() => {
                                         <span>{_`Grupos por edades`}</span>
                                     </li>
                                 </ul>
-                                <Button look="primary" class="bg-red-600 hover:bg-red-700">
-                                    <Link href="/contacto?curso=ninos">{_`Más información`}</Link>
-                                </Button>
                             </div>
                         </div>
                     </div>

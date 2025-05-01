@@ -195,51 +195,6 @@ export default component$(() => {
           </div>
         </section>
 
-        {/* Kids Section */}
-        <section class="py-16 bg-gray-100">
-          <div class="container mx-auto px-4">
-            <div class="grid gap-8 md:grid-cols-2 items-center max-w-5xl mx-auto">
-              <div class="relative">
-                <img
-                  src="/images/clases-para-ninos-ingles.png"
-                  alt={_`Clases de inglés para niños`}
-                  class="object-cover rounded-lg max-h-[300px]"
-                />
-                <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
-                  <p class="font-bold">{_`¡Grupos reducidos!`}</p>
-                </div>
-              </div>
-              <div>
-                <h2 class="mb-4 text-3xl font-bold">{_`Clases para los más chiquitos`}</h2>
-                <p class="mb-6 text-gray-600">
-                  {_`También ofrecemos clases especiales para niños en turno mañana, con metodologías lúdicas y adaptadas a su edad.`}
-                </p>
-                <ul class="mb-6 space-y-3">
-                  <li class="flex items-start gap-2">
-                    <LuCheck class="h-5 w-5 text-blue-600 mt-0.5" />
-                    <span>{_`Aprendizaje a través del juego`}</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <LuCheck class="h-5 w-5 text-blue-600 mt-0.5" />
-                    <span>{_`Canciones y cuentos en inglés`}</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <LuCheck class="h-5 w-5 text-blue-600 mt-0.5" />
-                    <span>{_`Actividades culturales`}</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <LuCheck class="h-5 w-5 text-blue-600 mt-0.5" />
-                    <span>{_`Grupos por edades`}</span>
-                  </li>
-                </ul>
-                <Button look="primary" class="bg-blue-600 hover:bg-blue-700">
-                  <Link href="/contacto?curso=ingles-ninos">{_`Más información`}</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Exams Section */}
         <section class="py-16 bg-white">
           <div class="container mx-auto px-4">

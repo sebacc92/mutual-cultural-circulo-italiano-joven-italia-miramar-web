@@ -80,7 +80,7 @@ export default component$(() => {
                             </li>
                             <li class="flex items-center gap-2 text-sm">
                                 <LuMail class="h-4 w-4 text-primary" />
-                                <span>info@circuloitalianomiramar.com.ar</span>
+                                <span>italianos@miramarense.com.ar</span>
                             </li>
                             <li class="mt-4 flex items-center gap-3">
                                 <Link href="https://www.facebook.com/circuloitalianomiramar" target="_blank" rel="noopener noreferrer">
