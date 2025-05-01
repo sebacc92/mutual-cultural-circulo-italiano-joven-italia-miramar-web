@@ -2,24 +2,30 @@ import { component$, useSignal, useVisibleTask$, $, useStylesScoped$ } from "@bu
 import { Link } from "@builder.io/qwik-city";
 import styles from "./hero-slider.css?inline";
 import { _ } from "compiled-i18n";
+import Slide1 from '~/media/slides/slide1.jpg?jsx';
+import Slide2 from '~/media/slides/slide2.jpg?jsx';
+import Slide3 from '~/media/slides/slide3.jpg?jsx';
+import Slide4 from '~/media/slides/slide4.jpg?jsx';
+import Slide5 from '~/media/slides/slide5.jpg?jsx';
+import Slide6 from '~/media/slides/slide6.jpg?jsx';
 
 // Type definition for slides
 interface Slide {
     id: number;
     title: string;
     description: string;
-    image: string;
+    image: any; // Cambiado a any para componentes
     ctaLink: string;
     ctaText: string;
 }
 
-// Placeholder slides - replace image URLs with actual images
+// Slides con imágenes locales optimizadas
 const slides: Slide[] = [
     {
         id: 1,
         title: "Bienvenidos al Círculo Italiano",
         description: "Acompañando a la ciudad de Miramar hace 136 años con cultura, tradición y comunidad.",
-        image: "https://placehold.co/1600x800/009246/FFFFFF.png?text=Cultura+Italiana",
+        image: Slide1,
         ctaLink: "/historia",
         ctaText: "Conocer nuestra historia",
     },
@@ -27,7 +33,7 @@ const slides: Slide[] = [
         id: 2,
         title: "Clases de Italiano",
         description: "Aprende el idioma de Dante con profesores nativos y certificación internacional.",
-        image: "https://placehold.co/1600x800/F1F5F9/000000.png?text=Clases+de+Italiano",
+        image: Slide2,
         ctaLink: "/clases/italiano",
         ctaText: "Ver cursos disponibles",
     },
@@ -35,7 +41,7 @@ const slides: Slide[] = [
         id: 3,
         title: "Eventos Culturales",
         description: "Descubre nuestro calendario de eventos, exposiciones, charlas y actividades.",
-        image: "https://placehold.co/1600x800/CE2B37/FFFFFF.png?text=Eventos+Culturales",
+        image: Slide3,
         ctaLink: "/eventos",
         ctaText: "Ver próximos eventos",
     },
@@ -43,7 +49,7 @@ const slides: Slide[] = [
         id: 4,
         title: "Trámites de Ciudadanía Italiana",
         description: "Te asesoramos y acompañamos en el proceso para obtener tu ciudadanía italiana.",
-        image: "https://placehold.co/1600x800/009246/FFFFFF.png?text=Ciudadan%C3%ADa+Italiana",
+        image: Slide4,
         ctaLink: "/tramites",
         ctaText: "Ver asesoría",
     },
@@ -51,7 +57,7 @@ const slides: Slide[] = [
         id: 5,
         title: "Alquiler de Salones",
         description: "Espacios ideales para eventos sociales, culturales y educativos en Miramar.",
-        image: "https://placehold.co/1600x800/F1F5F9/CE2B37.png?text=Alquiler+de+Salones",
+        image: Slide5,
         ctaLink: "/alquiler-salones",
         ctaText: "Consultar disponibilidad",
     },
@@ -59,7 +65,7 @@ const slides: Slide[] = [
         id: 6,
         title: "Sumate como Socio",
         description: "Formá parte de nuestra comunidad y accedé a beneficios exclusivos.",
-        image: "https://placehold.co/1600x800/CE2B37/FFFFFF.png?text=Hacete+Socio",
+        image: Slide6,
         ctaLink: "/contacto",
         ctaText: "Hazte socio",
     },
@@ -104,11 +110,7 @@ export default component$(() => {
                     key={slide.id}
                     class={`slide ${index === currentSlide.value ? "active" : ""}`}
                 >
-                    <img
-                        src={slide.image}
-                        alt={slide.title}
-                        class="slide-image"
-                    />
+                    <slide.image alt={slide.title} class="slide-image" />
                     <div class="absolute inset-0 bg-black/25"></div>
                     <div class="slide-content px-4 md:px-12 lg:container mx-auto">
                         <div class="max-w-lg bg-black/70 p-6 md:p-8 rounded-lg shadow-lg backdrop-blur-sm">
