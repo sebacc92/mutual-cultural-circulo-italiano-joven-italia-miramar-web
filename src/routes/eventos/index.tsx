@@ -12,6 +12,24 @@ import EventoAntilefIuraImg from '~/media/eventos3.webp?jsx';
 
 const eventos = [
     {
+        id: "aniversario-136",
+        title: "136° Aniversario - Cena, baile y algo más!",
+        date: "Sábado 10 de Mayo - 21:30hs",
+        imageComponent: EventoMalvinasImg,
+        description:
+            "¡Celebramos nuestros inicios! Cena, baile y algo más. Anticipadas hasta el 8/05: Socios $23.000, No socios $27.000. Entrada general desde el 9/05: $32.000.",
+        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
+    },
+    {
+        id: "peones-malvinas",
+        title: "Peones de Malvinas - Anhelando verte otra vez",
+        date: "Martes 6 de Mayo - 10hs y 15:30hs",
+        imageComponent: EventoAniversarioImg,
+        description:
+            "Obra de la Escuela de danza Ritmos en Acción. La historia de una madre que extraña a su hijo, de un hijo que necesita a su mamá, de un pueblo que llora y sueña libertad. Entrada general: $4.000. Valor especial escuelas: $2.000. Reservas por WhatsApp: 223 4219060.",
+        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
+    },
+    {
         id: "bienal-arte-2025",
         title: "Bienal de Arte 2025",
         date: "Sábado 5 de Abril - 19hs",
@@ -47,24 +65,6 @@ const eventos = [
         description:
             "Arranca el ciclo lectivo 2025 de clases de Italiano, con sus diferentes niveles y propuestas para todas las edades. Inscripciones abiertas hasta el 4 de abril.",
         location: "Mutual Cultural Círculo Italiano, Calle 24 n1214",
-    },
-    {
-        id: "aniversario-136",
-        title: "136° Aniversario - Cena, baile y algo más!",
-        date: "Sábado 10 de Mayo - 21:30hs",
-        imageComponent: EventoMalvinasImg,
-        description:
-            "¡Celebramos nuestros inicios! Cena, baile y algo más. Anticipadas hasta el 8/05: Socios $23.000, No socios $27.000. Entrada general desde el 9/05: $32.000.",
-        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
-    },
-    {
-        id: "peones-malvinas",
-        title: "Peones de Malvinas - Anhelando verte otra vez",
-        date: "Martes 6 de Mayo - 10hs y 15:30hs",
-        imageComponent: EventoAniversarioImg,
-        description:
-            "Obra de la Escuela de danza Ritmos en Acción. La historia de una madre que extraña a su hijo, de un hijo que necesita a su mamá, de un pueblo que llora y sueña libertad. Entrada general: $4.000. Valor especial escuelas: $2.000. Reservas por WhatsApp: 223 4219060.",
-        location: "Mutual Cultural Círculo Italiano Joven Italia, Miramar",
     },
     {
         id: "videoconferencia-renacimiento-italia",
@@ -118,11 +118,11 @@ function parseEventoDate(dateStr: string): Date | null {
 
 const today = new Date(2025, 3, 27); // 27 de abril de 2025 (mes 3 = abril)
 
-// Ordenar eventos por fecha ascendente (más antiguo primero)
+// Ordenar eventos por fecha descendente (más reciente primero)
 const eventosOrdenados = [...eventos].sort((a, b) => {
-    const fechaA = parseEventoDate(a.date) || new Date(2100, 0, 1);
-    const fechaB = parseEventoDate(b.date) || new Date(2100, 0, 1);
-    return fechaA.getTime() - fechaB.getTime();
+    const fechaA = parseEventoDate(a.date) || new Date(1900, 0, 1);
+    const fechaB = parseEventoDate(b.date) || new Date(1900, 0, 1);
+    return fechaB.getTime() - fechaA.getTime();
 });
 const eventosProximos = eventosOrdenados.filter(e => {
     const fecha = parseEventoDate(e.date);
@@ -260,7 +260,11 @@ export default component$(() => {
                                 </div>
 
                                 <div class="space-y-4">
-                                    {eventos.map((evento) => (
+                                    {[...eventos].sort((a, b) => {
+                                        const fechaA = parseEventoDate(a.date) || new Date(1900, 0, 1);
+                                        const fechaB = parseEventoDate(b.date) || new Date(1900, 0, 1);
+                                        return fechaB.getTime() - fechaA.getTime();
+                                    }).map((evento) => (
                                         <div key={evento.id} class="flex gap-4 border-b pb-4">
                                             <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-gray-100">
                                                 <LuCalendar class="h-6 w-6" />
