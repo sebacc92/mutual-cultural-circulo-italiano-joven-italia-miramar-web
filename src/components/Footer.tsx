@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import Logo from '~/media/logo.png?jsx';
+import Logo from '~/media/logo.png?w=96&h=96&jsx';
 import { _ } from "compiled-i18n";
 import { LuMapPin, LuPhone, LuMail, LuFacebook, LuInstagram } from "@qwikest/icons/lucide";
 

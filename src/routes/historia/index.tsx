@@ -145,7 +145,7 @@ export default component$(() => {
                                 <div class="mb-8">
                                     <h3 class="mb-2 text-xl font-semibold text-green-700">2010</h3>
                                     <p class="text-gray-600">
-                                        {_`19 de agosto - Inauguración del salón "Giuseppe Verdi" en el segundo piso, completando una importante etapa de expansión para la institución.`}
+                                        {_`19 de agosto - Inauguración del salón Giuseppe Verdi en el segundo piso, completando una importante etapa de expansión para la institución.`}
                                     </p>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ export default component$(() => {
                                 <h3 class="mb-4 text-2xl font-bold text-gray-800 text-center md:text-left">{_`Un espacio para la comunidad`}</h3>
                                 <div class="space-y-4 text-gray-700">
                                     <p>
-                                        {_`Desde su formación, nuestra subcomisión de cultura ha trabajado profesionalmente en la programación de eventos culturales anuales como la "Semana de la Cultura", proporcionando un espacio donde artistas, grupos e instituciones de la ciudad pueden mostrar sus talentos.`}
+                                        {_`Desde su formación, nuestra subcomisión de cultura ha trabajado profesionalmente en la programación de eventos culturales anuales como la Semana de la Cultura, proporcionando un espacio donde artistas, grupos e instituciones de la ciudad pueden mostrar sus talentos.`}
                                     </p>
                                     <p>
                                         {_`Hemos establecido un salón de exposiciones mensuales permanentes en nuestro hall de entrada, donde talentosos artistas locales pueden presentar sus obras, y organizamos regularmente conferencias, presentaciones de libros y talleres.`}
@@ -315,7 +315,7 @@ export default component$(() => {
                         <div class="mx-auto max-w-3xl text-center">
                             <blockquote class="relative italic text-xl text-gray-700 mb-6 p-6 border-l-4 border-green-500 bg-white rounded-r-lg shadow">
                                 <span class="absolute top-2 left-2 text-5xl text-green-300 opacity-50">“</span>
-                                {_`"Una institución que vio nacer a una ciudad, y una ciudad que vio crecer a una institución, un orgullo para todos los italianos y para todos sus descendientes. Un sueño que fue lejano y utópico, pero que se volvió realidad a partir del esfuerzo de cientos de personas que dedicaron parte de sus vidas a lograr que se convierta en una realidad. Hoy son 136 años y son muchos, pero aún nos quedan sueños por cumplir."`}
+                                "{_`Una institución que vio nacer a una ciudad, y una ciudad que vio crecer a una institución, un orgullo para todos los italianos y para todos sus descendientes. Un sueño que fue lejano y utópico, pero que se volvió realidad a partir del esfuerzo de cientos de personas que dedicaron parte de sus vidas a lograr que se convierta en una realidad. Hoy son 136 años y son muchos, pero aún nos quedan sueños por cumplir.`}"
                                 <span class="absolute bottom-2 right-2 text-5xl text-green-300 opacity-50">”</span>
                             </blockquote>
                         </div>

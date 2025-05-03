@@ -111,7 +111,7 @@ export default component$(() => {
                     class={`slide ${index === currentSlide.value ? "active" : ""}`}
                 >
                     <slide.image alt={slide.title} class="slide-image" />
-                    <div class="absolute inset-0 bg-black/25"></div>
+                    <div class="absolute inset-0 bg-black/40"></div>
                     <div class="slide-content px-4 md:px-12 lg:container mx-auto">
                         <div class="max-w-lg bg-black/70 p-6 md:p-8 rounded-lg shadow-lg backdrop-blur-sm">
                             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 drop-shadow-lg">

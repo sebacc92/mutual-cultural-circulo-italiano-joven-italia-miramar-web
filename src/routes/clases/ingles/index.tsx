@@ -356,7 +356,7 @@ export default component$(() => {
                   </div>
                 </div>
                 <p class="text-center italic mb-4">
-                  {_`"Las clases con la profesora Gladis son excelentes. Su método de enseñanza es muy claro y dinámico. En poco tiempo he notado un gran avance en mi nivel de inglés."`}
+                  "{_`Las clases con la profesora Gladis son excelentes. Su método de enseñanza es muy claro y dinámico. En poco tiempo he notado un gran avance en mi nivel de inglés.`}"
                 </p>
                 <div class="text-center">
                   <p class="font-semibold">{_`María González`}</p>
@@ -386,7 +386,7 @@ export default component$(() => {
                   </div>
                 </div>
                 <p class="text-center italic mb-4">
-                  {_`"Empecé desde cero y ahora puedo mantener conversaciones básicas en inglés. El ambiente es muy agradable y los grupos reducidos permiten una atención personalizada."`}
+                  "{_`Empecé desde cero y ahora puedo mantener conversaciones básicas en inglés. El ambiente es muy agradable y los grupos reducidos permiten una atención personalizada.`}"
                 </p>
                 <div class="text-center">
                   <p class="font-semibold">{_`Carlos Rodríguez`}</p>
@@ -416,7 +416,7 @@ export default component$(() => {
                   </div>
                 </div>
                 <p class="text-center italic mb-4">
-                  {_`"Mi hijo disfruta mucho las clases de inglés. La profesora Gladis tiene una manera muy especial de enseñar a los niños, haciendo que aprendan jugando."`}
+                  "{_`Mi hijo disfruta mucho las clases de inglés. La profesora Gladis tiene una manera muy especial de enseñar a los niños, haciendo que aprendan jugando.`}"
                 </p>
                 <div class="text-center">
                   <p class="font-semibold">{_`Laura Martínez`}</p>

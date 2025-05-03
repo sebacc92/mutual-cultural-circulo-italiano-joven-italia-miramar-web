@@ -24,7 +24,7 @@ export default component$(() => {
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {/* Tarjeta Idiomas */}
             <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
-              <div class="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
+              <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
               <Card.Header>
                 <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Idiomas`}</Card.Title>
                 <Card.Description class="text-gray-600">{_`Aprende italiano e inglés con nuestros diferentes niveles y propuestas para todas las edades.`}</Card.Description>
@@ -44,7 +44,7 @@ export default component$(() => {
             </Card.Root>
             {/* Tarjeta Eventos */}
             <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
-              <div class="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
+              <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
               <Card.Header>
                 <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Eventos Culturales`}</Card.Title>
                 <Card.Description class="text-gray-600">{_`Exposiciones, muestras, charlas y eventos que promueven la cultura italiana.`}</Card.Description>
@@ -59,7 +59,7 @@ export default component$(() => {
             </Card.Root>
             {/* Tarjeta Trámites */}
             <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
-              <div class="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
+              <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
               <Card.Header>
                 <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Trámites de Ciudadanía`}</Card.Title>
                 <Card.Description class="text-gray-600">{_`Asesoramiento y apoyo en los trámites para obtener la ciudadanía italiana.`}</Card.Description>
