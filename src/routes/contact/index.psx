@@ -69,7 +69,7 @@ export default component$(() => {
         <div class="mt-10 text-center text-gray-600">
           <p class="mb-2">Mutual Cultural Círculo Italiano Joven Italia</p>
           <p class="mb-2">Calle 24 n°1214, Miramar, Buenos Aires</p>
-          <p class="mb-2">Email: <a href="mailto:info@circuloitaliano.org.ar" class="text-green-700 underline">info@circuloitaliano.org.ar</a></p>
+          <p class="mb-2">Email: <a href="mailto:italianos@miramarense.com.ar" class="text-green-700 underline">italianos@miramarense.com.ar</a></p>
           <p>Teléfono: <a href="tel:+542294420000" class="text-green-700 underline">(02291) 42-0000</a></p>
         </div>
       </div>

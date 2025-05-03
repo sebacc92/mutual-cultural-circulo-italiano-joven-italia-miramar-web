@@ -1,8 +1,10 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { routeAction$, Form, zod$, z } from "@builder.io/qwik-city";
 import { _ } from "compiled-i18n";
 import styles from './styles.css?inline';
+import salonMichaelAngelloSrc from '~/media/salones/IMG_20250502_191442.jpg?url';
+import salonGiuseppeVerdiSrc from '~/media/salones/IMG_20250502_191252.jpg?url';
 
 export const useReservaAction = routeAction$(
     async (reserva) => {
@@ -28,6 +30,7 @@ export const useReservaAction = routeAction$(
 export default component$(() => {
     useStylesScoped$(styles)
     const reservaAction = useReservaAction();
+    const imagenSalonSeleccionado = useSignal(salonGiuseppeVerdiSrc);
 
     return (
         <div class="container mx-auto px-4 py-8">
@@ -43,8 +46,10 @@ export default component$(() => {
                     
                     <div class="salon-image mb-6 relative overflow-hidden rounded-lg shadow-2xl">
                         <img 
-                            src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                            alt={_`Salón principal del Círculo Italiano`}
+                            src={imagenSalonSeleccionado.value}
+                            alt={_`Salón seleccionado`}
+                            width="1000"
+                            height="667"
                             class="w-full h-auto transition-transform duration-700 hover:scale-105"
                         />
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
@@ -132,14 +137,31 @@ export default component$(() => {
                             <label class="block text-sm font-medium text-gray-700 mb-1">{_`¿Qué salón te interesa alquilar? *`}</label>
                             <div class="space-y-3">
                                 <label class="flex items-center p-3 border rounded-md hover:bg-gray-50 transition cursor-pointer">
-                                    <input type="radio" name="salon" value="Salón Michael Angello (1er Piso - 280 personas)" class="mr-3 text-primary h-4 w-4" />
+                                    <input 
+                                        type="radio" 
+                                        name="salon" 
+                                        value="Salón Michael Angello (1er Piso - 280 personas)" 
+                                        class="mr-3 text-primary h-4 w-4" 
+                                        required
+                                        // @ts-ignore
+                                        onChange$={() => imagenSalonSeleccionado.value = salonGiuseppeVerdiSrc}
+                                        checked
+                                    />
                                     <div>
                                         <span class="font-medium">{_`Salón Michael Angello`}</span>
                                         <p class="text-sm text-gray-500">{_`1er Piso - Capacidad: 280 personas`}</p>
                                     </div>
                                 </label>
                                 <label class="flex items-center p-3 border rounded-md hover:bg-gray-50 transition cursor-pointer">
-                                    <input type="radio" name="salon" value="Salón Guiseppe Verdi (2do Piso - 90 personas)" class="mr-3 text-primary h-4 w-4" />
+                                    <input 
+                                        type="radio" 
+                                        name="salon" 
+                                        value="Salón Guiseppe Verdi (2do Piso - 90 personas)" 
+                                        class="mr-3 text-primary h-4 w-4" 
+                                        required
+                                        // @ts-ignore
+                                        onChange$={() => imagenSalonSeleccionado.value = salonMichaelAngelloSrc}
+                                    />
                                     <div>
                                         <span class="font-medium">{_`Salón Guiseppe Verdi`}</span>
                                         <p class="text-sm text-gray-500">{_`2do Piso - Capacidad: 90 personas`}</p>
