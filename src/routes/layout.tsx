@@ -15,6 +15,7 @@ export const onGet: RequestHandler = async ({ cacheControl, headers, locale, que
   });
   // Allow overriding locale with query param `locale`
 	const maybeLocale = query.get('locale') || headers.get('accept-language')
+  console.log('maybeLocale', maybeLocale)
 	locale(guessLocale(maybeLocale))
 };
 

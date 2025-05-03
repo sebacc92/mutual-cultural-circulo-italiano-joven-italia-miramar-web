@@ -7,21 +7,21 @@ import { NavLink } from "./NavLink";
 
 export default component$(() => {
   const navigation = [
-    { name: "Inicio", href: "/" },
-    { name: "Eventos", href: "/eventos/" },
-    { name: "Trámites", href: "/tramites/" },
-    { name: "Alquiler de salones", href: "/alquiler-salones/" },
-    { name: "Historia", href: "/historia/" },
+    { name: _`Inicio`, href: "/" },
+    { name: _`Eventos`, href: "/eventos/" },
+    { name: _`Trámites`, href: "/tramites/" },
+    { name: _`Alquiler de salones`, href: "/alquiler-salones/" },
+    { name: _`Historia`, href: "/historia/" },
     {
-      name: "Idiomas",
+      name: _`Idiomas`,
       href: "#",
       dropdown: true,
       items: [
-        { name: "Clases de Italiano", href: "/clases/italiano/" },
-        { name: "Clases de Inglés", href: "/clases/ingles/" },
+        { name: _`Clases de Italiano`, href: "/clases/italiano/" },
+        { name: _`Clases de Inglés`, href: "/clases/ingles/" },
       ],
     },
-    { name: "Autoridades", href: "/autoridades/" },
+    { name: _`Autoridades`, href: "/autoridades/" },
   ]
   const mobileMenuOpen = useSignal(false);
   return (

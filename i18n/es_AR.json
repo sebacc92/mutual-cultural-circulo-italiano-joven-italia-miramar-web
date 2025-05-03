@@ -206,16 +206,16 @@
     "Revive momentos clave de nuestra trayectoria.": "",
     "Historia del Círculo Italiano Joven Italia": "",
     "Nuestros orígenes": "",
-    "La historia del Círculo Italiano comienza a finales del siglo XIX, cuando grupos de inmigrantes italianos decidieron radicarse en una incipiente Miramar. Ante la carencia de asistencia médica, el 28 de abril de 1889, estos inmigrantes formaron una sociedad italiana de socorros mutuos con el nombre de \"Joven Italia\", siendo su primer presidente Felice Lucini.": "",
+    "nuestros_origenes_p1": "La historia del Círculo Italiano comienza a finales del siglo XIX, cuando grupos de inmigrantes italianos decidieron radicarse en una incipiente Miramar. Ante la carencia de asistencia médica, el 28 de abril de 1889, estos inmigrantes formaron una sociedad italiana de socorros mutuos con el nombre de \"Joven Italia\", siendo su primer presidente Felice Lucini.",
     "En sus inicios, la sociedad funcionaba mediante una cuota mensual que cubría gastos de enfermedad y medicamentos para sus socios. Esta estructura operó durante décadas, pero con la llegada de las obras sociales, su propósito original fue perdiendo relevancia.": "",
     "Después de la Segunda Guerra Mundial, una nueva ola de inmigración italiana llegó a Miramar, lo que dio origen el 29 de junio de 1959 al Círculo Italiano de Miramar, bajo la presidencia de Alberto Caroso. Esta nueva institución se enfocó en el aspecto social y cultural, organizando reuniones, almuerzos, cenas y diversas actividades para la comunidad italiana.": "",
     "136 años Círculo Italiano": "",
     "Línea de tiempo": "",
-    "28 de abril - Fundación de la sociedad italiana de socorros mutuos \"Joven Italia\" en Miramar, bajo la presidencia de Felice Lucini, para brindar asistencia médica y medicamentos a sus socios.": "",
+    "timelone_1889": "28 de abril - Fundación de la sociedad italiana de socorros mutuos \"Joven Italia\" en Miramar, bajo la presidencia de Felice Lucini, para brindar asistencia médica y medicamentos a sus socios.",
     "29 de junio - Formación del Círculo Italiano de Miramar, presidido por Alberto Caroso, como respuesta a la nueva ola de inmigración italiana posterior a la Segunda Guerra Mundial. Se inician reuniones sociales, almuerzos, cenas y celebraciones de cumpleaños de socios.": "",
-    "Formación de una comisión normalizadora para reactivar la sociedad de socorros mutuos \"Joven Italia\", que había quedado sin socios con la llegada de las obras sociales.": "",
+    "timelone_2000": "Formación de una comisión normalizadora para reactivar la sociedad de socorros mutuos \"Joven Italia\", que había quedado sin socios con la llegada de las obras sociales.",
     "Junio - Inicio de los trabajos de renovación en el antiguo edificio de la Joven Italia, con el objetivo de dejar un importante legado cultural a la ciudad.": "",
-    "Agosto - Fusión de ambas instituciones tras una asamblea unánime, formando la \"Mutual Cultural Círculo Italiano Joven Italia\". Octubre - Inauguración del Salón Michelangelo. Se crea una subcomisión de cultura que comienza a organizar la semana de la cultura anual.": "",
+    "timeline_2005": "Agosto - Fusión de ambas instituciones tras una asamblea unánime, formando la \"Mutual Cultural Círculo Italiano Joven Italia\". Octubre - Inauguración del Salón Michelangelo. Se crea una subcomisión de cultura que comienza a organizar la semana de la cultura anual.",
     "Venta del edificio del Círculo Italiano e inicio de la construcción de un segundo piso en la sede de Joven Italia, con nuevas aulas y un salón adicional.": "",
     "19 de agosto - Inauguración del salón \"Giuseppe Verdi\" en el segundo piso, completando una importante etapa de expansión para la institución.": "",
     "Celebración de los 136 años de historia, reafirmando nuestro compromiso con la promoción de la cultura italiana en Miramar y continuando con los sueños por cumplir que impulsan nuestra institución.": "",
@@ -314,6 +314,10 @@
     "Mi hijo disfruta mucho las clases de inglés. La profesora Gladis tiene una manera muy especial de enseñar a los niños, haciendo que aprendan jugando.": "",
     "Una institución que vio nacer a una ciudad, y una ciudad que vio crecer a una institución, un orgullo para todos los italianos y para todos sus descendientes. Un sueño que fue lejano y utópico, pero que se volvió realidad a partir del esfuerzo de cientos de personas que dedicaron parte de sus vidas a lograr que se convierta en una realidad. Hoy son 136 años y son muchos, pero aún nos quedan sueños por cumplir.": "",
     "19 de agosto - Inauguración del salón Giuseppe Verdi en el segundo piso, completando una importante etapa de expansión para la institución.": "",
-    "Desde su formación, nuestra subcomisión de cultura ha trabajado profesionalmente en la programación de eventos culturales anuales como la Semana de la Cultura, proporcionando un espacio donde artistas, grupos e instituciones de la ciudad pueden mostrar sus talentos.": ""
+    "Desde su formación, nuestra subcomisión de cultura ha trabajado profesionalmente en la programación de eventos culturales anuales como la Semana de la Cultura, proporcionando un espacio donde artistas, grupos e instituciones de la ciudad pueden mostrar sus talentos.": "",
+    "Inicio": "",
+    "Eventos": "",
+    "Trámites": "",
+    "Historia": ""
   }
 }

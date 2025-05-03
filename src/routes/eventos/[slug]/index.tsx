@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { useLocation, Link } from "@builder.io/qwik-city";
-import { LuCalendar, LuMapPin, LuClock } from "@qwikest/icons/lucide";
+import { LuCalendar, LuMapPin } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
 import EventoAniversarioImg from '~/media/eventos1.png?jsx';
 import EventoMalvinasImg from '~/media/eventos2.png?jsx';
@@ -119,9 +119,11 @@ export default component$(() => {
           <span class="flex items-center gap-2"><LuMapPin class="h-5 w-5" /> {evento.location}</span>
         </div>
         <p class="text-gray-700 text-lg mb-8">{evento.description}</p>
-        <Button as="a" href="/contacto" class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md border-2 border-green-700 px-8 py-2">
-          Consultar
-        </Button>
+        <Link href="/contacto">
+          <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md border-2 border-green-700 px-8 py-2">
+            Consultar
+          </Button>
+        </Link>
       </div>
     </section>
   );

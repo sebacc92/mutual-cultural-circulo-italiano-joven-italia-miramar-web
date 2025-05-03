@@ -53,7 +53,7 @@ export default component$(() => {
                                 <h2 class="mb-6 text-3xl font-bold text-gray-800">{_`Nuestros orígenes`}</h2>
                                 <div class="space-y-5 text-gray-700">
                                     <p>
-                                        {_`La historia del Círculo Italiano comienza a finales del siglo XIX, cuando grupos de inmigrantes italianos decidieron radicarse en una incipiente Miramar. Ante la carencia de asistencia médica, el 28 de abril de 1889, estos inmigrantes formaron una sociedad italiana de socorros mutuos con el nombre de "Joven Italia", siendo su primer presidente Felice Lucini.`}
+                                        {_`nuestros_origenes_p1`}
                                     </p>
                                     <p>
                                         {_`En sus inicios, la sociedad funcionaba mediante una cuota mensual que cubría gastos de enfermedad y medicamentos para sus socios. Esta estructura operó durante décadas, pero con la llegada de las obras sociales, su propósito original fue perdiendo relevancia.`}
@@ -85,7 +85,7 @@ export default component$(() => {
                                 <div class="mb-8">
                                     <h3 class="mb-2 text-xl font-semibold text-green-700">1889</h3>
                                     <p class="text-gray-600">
-                                        {_`28 de abril - Fundación de la sociedad italiana de socorros mutuos "Joven Italia" en Miramar, bajo la presidencia de Felice Lucini, para brindar asistencia médica y medicamentos a sus socios.`}
+                                        {_`timelone_1889`}
                                     </p>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ export default component$(() => {
                                 <div class="mb-8">
                                     <h3 class="mb-2 text-xl font-semibold text-green-700">2000</h3>
                                     <p class="text-gray-600">
-                                        {_`Formación de una comisión normalizadora para reactivar la sociedad de socorros mutuos "Joven Italia", que había quedado sin socios con la llegada de las obras sociales.`}
+                                        {_`timelone_2000`}
                                     </p>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ export default component$(() => {
                                 <div class="mb-8">
                                     <h3 class="mb-2 text-xl font-semibold text-green-700">2005</h3>
                                     <p class="text-gray-600">
-                                        {_`Agosto - Fusión de ambas instituciones tras una asamblea unánime, formando la "Mutual Cultural Círculo Italiano Joven Italia". Octubre - Inauguración del Salón Michelangelo. Se crea una subcomisión de cultura que comienza a organizar la semana de la cultura anual.`}
+                                        {_`timeline_2005`}
                                     </p>
                                 </div>
                             </div>

@@ -72,6 +72,51 @@ export default component$(() => {
                 </Button>
               </Card.Footer>
             </Card.Root>
+            {/* Tarjeta Danzas Ritmos Latinos */}
+            <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
+              <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
+              <Card.Header>
+                <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Danzas "Ritmos Latinos"`}</Card.Title>
+                <Card.Description class="text-gray-600">{_`Clases y talleres de danzas latinas para todas las edades. Vení a moverte y divertirte aprendiendo ritmos como salsa, bachata y más.`}</Card.Description>
+              </Card.Header>
+              <Card.Footer>
+                <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                  <Link href="/clases" class="w-full">
+                    {_`Ver más`}
+                  </Link>
+                </Button>
+              </Card.Footer>
+            </Card.Root>
+            {/* Tarjeta Nutrición */}
+            <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
+              <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
+              <Card.Header>
+                <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Nutrición`}</Card.Title>
+                <Card.Description class="text-gray-600">{_`Charlas, talleres y asesoramiento sobre alimentación saludable y bienestar, a cargo de profesionales.`}</Card.Description>
+              </Card.Header>
+              <Card.Footer>
+                <Button class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-red-700">
+                  <Link href="/eventos" class="w-full">
+                    {_`Próximas actividades`}
+                  </Link>
+                </Button>
+              </Card.Footer>
+            </Card.Root>
+            {/* Tarjeta Exposición de obras */}
+            <Card.Root class="transition duration-300 ease-in-out hover:shadow-xl border border-green-600 rounded-xl bg-white/90 shadow-md hover:-translate-y-1 relative overflow-hidden">
+              <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-green-600 via-white to-red-600 rounded-t-xl" />
+              <Card.Header>
+                <Card.Title class="text-xl text-gray-800 font-serif tracking-wide">{_`Exposición de obras`}</Card.Title>
+                <Card.Description class="text-gray-600">{_`Espacio para artistas locales y regionales. Exhibiciones de pintura, fotografía y otras expresiones artísticas.`}</Card.Description>
+              </Card.Header>
+              <Card.Footer>
+                <Button class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition-all border-2 border-green-700">
+                  <Link href="/eventos" class="w-full">
+                    {_`Ver exposiciones`}
+                  </Link>
+                </Button>
+              </Card.Footer>
+            </Card.Root>
           </div>
         </div>
       </section>
