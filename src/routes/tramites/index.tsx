@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link } from "@builder.io/qwik-city";
 import { LuCheck, LuFileText, LuHelpCircle, LuInfo } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
+import { Accordion } from "~/components/ui/accordion/accordion";
 import DocumentosParaCiudadaniaItalianaImg from "~/media/documentos_para_ciudadania_italiana.png?jsx";
 import { _ } from "compiled-i18n";
 
@@ -200,44 +201,52 @@ export default component$(() => {
                             </p>
                         </div>
 
-                        <div class="mx-auto max-w-3xl space-y-6">
-                            <div class="border rounded bg-white p-6">
-                                <h3 class="text-lg font-medium mb-2">{_`¿Quiénes pueden solicitar la ciudadanía italiana?`}</h3>
-                                <p class="text-gray-600">
+                        <Accordion.Root class="mx-auto max-w-3xl" collapsible behavior="single">
+                            <Accordion.Item class="border rounded bg-white mb-2">
+                                <Accordion.Trigger class="px-6 py-4">
+                                    {_`¿Quiénes pueden solicitar la ciudadanía italiana?`}
+                                </Accordion.Trigger>
+                                <Accordion.Content class="px-6 pb-4">
                                     {_`Cualquier persona que pueda demostrar su descendencia de un ciudadano italiano, sin límite de generaciones, siempre que la línea de transmisión no se haya interrumpido.`}
-                                </p>
-                            </div>
+                                </Accordion.Content>
+                            </Accordion.Item>
 
-                            <div class="border rounded bg-white p-6">
-                                <h3 class="text-lg font-medium mb-2">{_`¿Cuánto tiempo toma el proceso?`}</h3>
-                                <p class="text-gray-600">
+                            <Accordion.Item class="border rounded bg-white mb-2">
+                                <Accordion.Trigger class="px-6 py-4">
+                                    {_`¿Cuánto tiempo toma el proceso?`}
+                                </Accordion.Trigger>
+                                <Accordion.Content class="px-6 pb-4">
                                     {_`El tiempo varía según cada caso, pero generalmente puede tomar entre 1 y 3 años desde la presentación de la solicitud hasta la obtención de la ciudadanía.`}
-                                </p>
-                            </div>
+                                </Accordion.Content>
+                            </Accordion.Item>
 
-                            <div class="border rounded bg-white p-6">
-                                <h3 class="text-lg font-medium mb-2">{_`¿Qué documentos necesito?`}</h3>
-                                <p class="text-gray-600">
+                            <Accordion.Item class="border rounded bg-white mb-2">
+                                <Accordion.Trigger class="px-6 py-4">
+                                    {_`¿Qué documentos necesito?`}
+                                </Accordion.Trigger>
+                                <Accordion.Content class="px-6 pb-4">
                                     {_`Necesitarás partidas de nacimiento, matrimonio y defunción de todos tus ascendientes en la línea italiana, desde tu antepasado italiano hasta ti. Todos deben estar legalizados y traducidos al italiano.`}
-                                </p>
-                            </div>
+                                </Accordion.Content>
+                            </Accordion.Item>
 
-                            <div class="border rounded bg-white p-6">
-                                <h3 class="text-lg font-medium mb-2">
+                            <Accordion.Item class="border rounded bg-white mb-2">
+                                <Accordion.Trigger class="px-6 py-4">
                                     {_`¿Puedo tramitar la ciudadanía si mi antepasado italiano se naturalizó argentino?`}
-                                </h3>
-                                <p class="text-gray-600">
+                                </Accordion.Trigger>
+                                <Accordion.Content class="px-6 pb-4">
                                     {_`Depende de cuándo se naturalizó. Si lo hizo después del nacimiento del siguiente descendiente en la línea, aún puedes solicitar la ciudadanía. Si fue antes, la línea de transmisión se interrumpió.`}
-                                </p>
-                            </div>
+                                </Accordion.Content>
+                            </Accordion.Item>
 
-                            <div class="border rounded bg-white p-6">
-                                <h3 class="text-lg font-medium mb-2">{_`¿Qué beneficios tiene la ciudadanía italiana?`}</h3>
-                                <p class="text-gray-600">
+                            <Accordion.Item class="border rounded bg-white mb-2">
+                                <Accordion.Trigger class="px-6 py-4">
+                                    {_`¿Qué beneficios tiene la ciudadanía italiana?`}
+                                </Accordion.Trigger>
+                                <Accordion.Content class="px-6 pb-4">
                                     {_`La ciudadanía italiana te permite residir, trabajar y estudiar en cualquier país de la Unión Europea, viajar sin restricciones por Europa, y transmitir la ciudadanía a tus descendientes.`}
-                                </p>
-                            </div>
-                        </div>
+                                </Accordion.Content>
+                            </Accordion.Item>
+                        </Accordion.Root>
                     </div>
                 </section>
 
