@@ -266,8 +266,10 @@ export default component$(() => {
                     <div class="salon-card bg-white rounded-lg overflow-hidden shadow-lg">
                         <div class="salon-image h-64 sm:h-80 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                src={salonGiuseppeVerdiSrc}
                                 alt={_`Salón Michael Angello`}
+                                width="1350"
+                                height="900"
                                 class="w-full h-full object-cover"
                             />
                         </div>
@@ -295,8 +297,10 @@ export default component$(() => {
                     <div class="salon-card bg-white rounded-lg overflow-hidden shadow-lg">
                         <div class="salon-image h-64 sm:h-80 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                src={salonMichaelAngelloSrc}
                                 alt={_`Salón Guiseppe Verdi`}
+                                width="1350"
+                                height="900"
                                 class="w-full h-full object-cover"
                             />
                         </div>

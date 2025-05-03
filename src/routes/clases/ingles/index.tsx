@@ -4,6 +4,7 @@ import { Link } from "@builder.io/qwik-city";
 import { LuCheck, LuClock, LuUser, LuCalendar } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
 import { _ } from "compiled-i18n";
+import ClaseInglesImg from "~/media/clases-italiano.jpeg?jsx";
 
 export default component$(() => {
   return (
@@ -41,11 +42,9 @@ export default component$(() => {
                 </div>
               </div>
               <div class="flex justify-center">
-                <img
-                  src="/images/clases-ingles.png"
-                  alt={_`Clases de Inglés 2025`}
-                  class="h-[350px] object-contain"
-                />
+                  <ClaseInglesImg
+                      style={{ height: "600px", maxWidth: "500px" }}
+                  />
               </div>
             </div>
           </div>
