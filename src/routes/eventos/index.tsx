@@ -138,7 +138,7 @@ export default component$(() => {
         <div class="flex min-h-screen flex-col">
             <main class="flex-1">
                 {/* Hero Section */}
-                <section class="bg-red-600 py-16 text-white">
+                <section class="bg-green-600 py-16 text-white">
                     <div class="container mx-auto px-4">
                         <div class="text-center">
                             <h1 class="mb-4 text-4xl font-bold">{_`Eventos y Muestras`}</h1>
@@ -181,7 +181,7 @@ export default component$(() => {
                                         </div>
                                     </div>
                                     <div class="p-6 pt-0">
-                                        <Button look="primary" class="bg-red-600 hover:bg-red-700">
+                                        <Button look="primary" class="bg-green-600 hover:bg-green-700">
                                             <Link href={`/eventos/${evento.id}`}>{_`Más información`}</Link>
                                         </Button>
                                     </div>
@@ -223,7 +223,7 @@ export default component$(() => {
                                         </div>
                                     </div>
                                     <div class="p-6 pt-0">
-                                        <Button look="primary" class="bg-red-600 hover:bg-red-700 opacity-80 cursor-default" disabled>
+                                        <Button look="primary" class="bg-gray-400 opacity-80 cursor-default" disabled>
                                             {_`Finalizado`}
                                         </Button>
                                     </div>
@@ -288,13 +288,13 @@ export default component$(() => {
                 </section>
 
                 {/* CTA Section */}
-                <section class="bg-red-600 py-16 text-white">
+                <section class="bg-green-600 py-16 text-white">
                     <div class="container mx-auto px-4 text-center">
                         <h2 class="mb-4 text-3xl font-bold">{_`¿Tienes un proyecto cultural?`}</h2>
                         <p class="mx-auto mb-8 max-w-2xl text-lg">
                             {_`Acércanos tu propuesta. Estamos abiertos a colaboraciones y nuevas iniciativas culturales.`}
                         </p>
-                        <Button look="outline" size="lg" class="bg-white text-red-600 hover:bg-white/90">
+                        <Button look="outline" size="lg" class="bg-white text-green-600 hover:bg-white/90">
                             <Link href="/contacto?asunto=proyecto">{_`Presentar proyecto`}</Link>
                         </Button>
                     </div>

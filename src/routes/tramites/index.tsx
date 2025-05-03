@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link } from "@builder.io/qwik-city";
 import { LuCheck, LuFileText, LuHelpCircle, LuInfo } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
+import DocumentosParaCiudadaniaItalianaImg from "~/media/documentos_para_ciudadania_italiana.png?jsx";
 import { _ } from "compiled-i18n";
 
 export default component$(() => {
@@ -183,11 +184,7 @@ export default component$(() => {
                                 </div>
                             </div>
                             <div class="relative">
-                                <img
-                                    src="/images/documentos-ciudadania.jpg"
-                                    alt={_`Documentos para ciudadanía italiana`}
-                                    class="rounded-lg max-h-[300px] w-full object-cover"
-                                />
+                                <DocumentosParaCiudadaniaItalianaImg />
                             </div>
                         </div>
                     </div>
