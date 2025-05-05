@@ -4,7 +4,7 @@ import {guessLocale} from 'compiled-i18n'
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 
-export const onGet: RequestHandler = async ({ cacheControl, headers, locale, query }) => {
+export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.dev/docs/caching/
   cacheControl({
@@ -13,9 +13,14 @@ export const onGet: RequestHandler = async ({ cacheControl, headers, locale, que
     // Max once every 5 seconds, revalidate on the server to get a fresh version of this page
     maxAge: 5,
   });
-  // Allow overriding locale with query param `locale`
+  // La lógica del locale se mueve a onRequest
+};
+
+// Mover la lógica de detección de locale a onRequest
+export const onRequest: RequestHandler = async ({ query, headers, locale }) => {
+	// Allow overriding locale with query param `locale`
 	const maybeLocale = query.get('locale') || headers.get('accept-language')
-  console.log('maybeLocale', maybeLocale)
+  console.log('onRequest maybeLocale:', maybeLocale) // Añadir log para depuración
 	locale(guessLocale(maybeLocale))
 };
 
