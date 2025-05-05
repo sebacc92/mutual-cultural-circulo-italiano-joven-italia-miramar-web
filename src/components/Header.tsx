@@ -1,9 +1,9 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal, getLocale } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import Logo from '~/media/logo.png?w=96&h=96&jsx';
-import { _ } from "compiled-i18n";
-import { LocaleSelector } from "./locale-selector";
+import { _, locales } from "compiled-i18n";
 import { NavLink } from "./NavLink";
+import { LuChevronDown, LuLanguages } from '@qwikest/icons/lucide';
 
 export default component$(() => {
   const navigation = [
@@ -24,6 +24,19 @@ export default component$(() => {
     { name: _`Autoridades`, href: "/autoridades/" },
   ]
   const mobileMenuOpen = useSignal(false);
+  const currentLocale = getLocale();
+  const showLanguageDropdown = useSignal<boolean>(false);
+  const languageNamesShort: Record<string, string> = {
+      'es_AR': 'ES',
+      'en_US': 'EN',
+      'it_IT': 'IT',
+  };
+  const languageNames: Record<string, string> = {
+      'es_AR': 'Español',
+      'en_US': 'English',
+      'it_IT': 'Italiano',
+  };
+
   return (
     <header class="w-full">
       {/* Top bar with contact info and social media */}
@@ -54,7 +67,38 @@ export default component$(() => {
           >
             {_`Contacto`}
           </Link>
-          <LocaleSelector />
+          <div class="relative">
+            <button
+                onClick$={() => showLanguageDropdown.value = !showLanguageDropdown.value}
+                class="flex items-center justify-center p-2 text-[#CE2B37] hover:text-[#b52532] bg-white/90 rounded-lg transition-colors cursor-pointer"
+                aria-label={_`Change language`}
+            >
+                <LuLanguages class="w-5 h-5" />
+                <span class="ml-1 text-sm hidden sm:inline">{languageNamesShort[currentLocale] || currentLocale}</span>
+                <LuChevronDown
+                    class={`w-5 h-5 transition-transform duration-200 ${showLanguageDropdown.value ? "rotate-180" : "rotate-0"}`}
+                />
+            </button>
+
+            {showLanguageDropdown.value && (
+                <div class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-20 animate-fadeIn border border-gray-200">
+                    {locales.map((locale) => (
+                        <a
+                            key={locale}
+                            href={`?locale=${locale}`}
+                            class={`block px-4 py-2 text-sm ${locale === currentLocale ?
+                                'bg-[#009246]/10 text-[#009246] font-medium' :
+                                'text-gray-700 hover:bg-gray-100'}`}
+                        >
+                            {languageNames[locale] || locale}
+                            {locale === currentLocale && (
+                                <span class="ml-2">✓</span>
+                            )}
+                        </a>
+                    ))}
+                </div>
+            )}
+        </div>
           <a
             href="https://www.facebook.com/italianos.enmiramar"
             target="_blank"

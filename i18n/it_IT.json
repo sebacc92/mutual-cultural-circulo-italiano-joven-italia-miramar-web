@@ -319,8 +319,6 @@
     "Eventos": "Eventi",
     "Trámites": "Pratiche",
     "Historia": "Storia",
-    "Contamos con una lista de proveedores de catering recomendados, pero también puede traer su propio servicio. Consulte por nuestras opciones de menù italiano tradizionale.": "Abbiamo una lista di fornitori di catering consigliati, ma puoi anche portare il tuo servizio. Consulta le nostre opzioni di menù tradizionale italiano.",
-    "Desde su formación, nuestra subcomisión de cultura ha trabajado profesionalmente en la programación de eventos culturales anuales como la Semana de la Cultura, proporcionando un espacio donde artistas, gruppi e istituzioni di città possono mostrare i loro talenti.": "Dalla sua formazione, la nostra sottocommissione culturale ha lavorato professionalmente nella programmazione di eventi culturali annuali come la Settimana della Cultura, fornendo uno spazio dove artisti, gruppi e istituzioni della città possono mostrare i loro talenti.",
     "Nuestro cóctel de moda anual, que comenzó como un pequeño evento, se ha convertido en un acontecimiento insignia de la ciudad, contando con figuras de primera línea en el mundo de la moda y recaudando fondos para instituciones locales necesitadas.": "Il nostro cocktail di moda annuale, iniziato come un piccolo evento, è diventato un appuntamento simbolo della città, contando su figure di spicco nel mondo della moda e raccogliendo fondi per istituzioni locali bisognose.",
     "Danzas \"Ritmos Latinos\"": "Danze \"Ritmi Latini\"",
     "Clases y talleres de danzas latinas para todas las edades. Vení a moverte y divertirte aprendiendo ritmos como salsa, bachata y más.": "Corsi e laboratori di danze latine per tutte le età. Vieni a muoverti e divertirti imparando ritmi come salsa, bachata e altro.",
@@ -336,6 +334,8 @@
     "No hay eventos próximos programados.": "Non ci sono eventi prossimi programmati.",
     "Ver todos los eventos": "Vedi tutti gli eventi",
     "Salón seleccionado": "Salone selezionato",
-    "danzas_ritmos_latinos": "Danze \"Ritmos Latinos\""
+    "danzas_ritmos_latinos": "Danze \"Ritmos Latinos\"",
+    "Contamos con una lista de proveedores de catering recomendados, pero también puede traer su propio servicio. Consulte por nuestras opciones de menú italiano tradicional.": "",
+    "Desde su formación, nuestra subcomisión de cultura ha trabajado profesionalmente en la programación de eventos culturales anuales como la Semana de la Cultura, proporcionando un espacio donde artistas, grupos e instituciones de la ciudad pueden mostrar sus talentos.": ""
   }
 }
